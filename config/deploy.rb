@@ -6,7 +6,7 @@ set :repo_url, %x{git config remote.origin.url}.chomp
 set :scm, :git
 
 set :format, :pretty
-set :log_level, :info
+set :log_level, :debug
 set :pty, true
 set :git_shallow_clone, 1
 
