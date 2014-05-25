@@ -9,12 +9,14 @@ elsif Rails.env.production?
   domain = 'devf.mx'
 end
 
-contact_email = dev_mail || "hello@#{domain}"
-support_email = dev_mail || "support@#{domain}"
+contact_email = dev_mail || "hola@#{domain}"
+support_email = dev_mail || "hola@#{domain}"
 
+error_notifications_to = [ contact_email ]
 notify_postulations_to = [ contact_email ]
 if Rails.env.production?
-  notify_postulations_to = [ "hello@#{domain}" ]
+  notify_postulations_to = [ "hola@#{domain}" ]
+  error_notifications_to = [ "vic.borja@gmail.com" ]
 end
 
 %>
@@ -22,6 +24,10 @@ common: &common
   domain: "<%= domain %>"
   contact_email: "<%= contact_email %>"
   support_email: "<%= support_email %>"
+  error_notifications_to:
+    <% error_notifications_to.each do |mail| %>
+    - "<%= mail %>"
+    <% end %>
   notify_postulations_to:
     <% notify_postulations_to.each do |mail| %>
     - "<%= mail %>"
@@ -47,3 +53,10 @@ test:
 production:
   <<: *common
   smtp_settings:
+    :address: "smtp.gmail.com"
+    :port: 587
+    :domain: "devf.mx"
+    :user_name: "noreply@devf.mx"
+    :password: "<%= Rails.application.secrets.smtp_password %>"
+    :authentication: plain
+    :enable_starttls_auto: true

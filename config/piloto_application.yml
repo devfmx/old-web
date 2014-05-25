@@ -1,0 +1,41 @@
+-
+  question: "Nombre"
+  type: name
+-
+  question: "Email"
+  type: email
+-
+  question: "Teléfono"
+  type: phone
+-
+  question: "¿Dónde vives? (delegación, ciudad, estado, etc.)"
+  type: textarea
+-
+  question: "Si no existiera tecnología, ¿que te gustaría crear o construir?"
+  type: textarea
+-
+  question: "¿Por qué quieres tomar el curso de Dev.F.?"
+  type: textarea
+-
+  question: "¿Qué es lo más interesante o fascinante que has aprendido en el último mes?"
+  type: textarea
+-
+  question: "¿Qué haces en tu tiempo libre?"
+  type: textarea
+-
+  question: "¿Cómo escuchaste de Dev.F.?"
+  type: select
+  choices:
+    - En mi escuela
+    - Por algun amigo
+    - Por alguna red social
+    - Otro
+-
+  question: "¿Qué experiencia o aprendizaje previo has tenido en programación?"
+  type: textarea
+-
+  question: "¿Estudias una carrera técnica o has tomado algún curso en línea de programación?"
+  type: textarea
+-
+  question: "Comparte con nosotros algun enlace a GitHub, Twitter o cualquier pagina sobre ti"
+  type: textarea
