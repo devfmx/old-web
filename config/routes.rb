@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get 'users/logout' => 'devise/sessions#destroy'
   end
 
-  root 'applications#new'
+  root 'public#index'
 
   resources :applications do
   end
