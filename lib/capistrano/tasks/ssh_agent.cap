@@ -1,0 +1,12 @@
+namespace 'git' do
+  task 'start_ssh_agent' do
+    unless ENV['SSH_AGENT_PID']
+      puts "Starting ssh-agent"
+      `ssh-agent -s 2>/dev/null`.split("\n").map { |n| n =~ /(\w+)=(\w+)/ && ENV[$1] = $2 }
+      `[ -f ~/.ssh/id_rsa ] && ssh-add ~/.ssh/id_rsa`
+      at_exit { `ssh-agent -k` }
+    end
+  end
+
+  task 'check' => 'start_ssh_agent'
+end

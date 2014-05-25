@@ -1,0 +1,5 @@
+task :console do
+ cmd = %Q{ ssh #{roles(:app).first} -t 'cd #{deploy_path}/current && bundle exec rails console #{fetch(:stage)}' }
+ puts cmd
+ exec cmd
+end

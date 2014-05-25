@@ -1,0 +1,13 @@
+# override db:migrate to use bundler
+Rake::Task['deploy:migrate'].clear
+namespace :deploy do
+    task :migrate do
+      on roles :web do
+        within release_path do
+          with rails_env: fetch(:rails_env) do
+            execute :bundle, 'exec', 'rake', "db:migrate"
+          end
+        end
+    end
+  end
+end

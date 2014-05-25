@@ -1,0 +1,19 @@
+desc 'Export foreman as upstart scripts.'
+task 'upstart_foreman' do
+  on roles :web do
+    within release_path do
+      app_name  = fetch(:application)
+      user      = fetch(:foreman_user)
+      proc_file = fetch(:deploy_to) + '/current/Procfile'
+      init_dir  = fetch(:deploy_to) + '/shared/init'
+      log_dir   = fetch(:deploy_to) + '/shared/log'
+      execute :bundle, *%W[ exec  foreman export 
+        --app  #{app_name}
+        --log  #{log_dir} 
+        --user #{user}
+        --procfile #{proc_file}
+        upstart #{init_dir}
+        ]
+    end
+  end
+end

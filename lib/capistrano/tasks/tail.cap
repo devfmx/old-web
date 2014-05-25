@@ -1,0 +1,8 @@
+task :tail do
+  on roles :web do
+    trap("INT") { puts 'Interupted'; exit 0; }
+    within release_path do
+      execute :tail, '-f', "log/*"
+    end
+  end
+end
