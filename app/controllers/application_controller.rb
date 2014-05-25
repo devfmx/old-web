@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_admin_user
-    current_user && AdminUser.find_by_user(current_user)
+    current_user && AdminUser.find_by_user_id(current_user)
   end
 
 end
