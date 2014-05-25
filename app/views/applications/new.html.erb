@@ -1,0 +1,8 @@
+<%= form_for @application do |f| %>
+
+  <%= fields_for :answers do |f| %>
+    <%= render :partial => 'question', :collection => @questions, :locals => {:f => f} %>
+  <% end %>
+
+  <%= f.submit "Apply" %>
+<% end %>

@@ -1,0 +1,9 @@
+<p>Hola <%= @user.name %>!</p>
+
+<p>
+  Estamos muy felices de darte la noticia de que has sido aceptado al programa <%= @batch.name %> en <%= link_to "DevF", root_url(:host => Settings.domain) %>
+</p>
+
+<p>
+  Te esperamos el dia <%= @batch.starts_at %> !
+</p>

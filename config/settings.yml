@@ -1,0 +1,49 @@
+<%
+
+if Rails.env.development?
+  domain = 'devf.dev'
+  dev_mail = %x(git config user.email).chomp
+elsif Rails.env.test?
+  domain = 'devf.test' 
+elsif Rails.env.production?
+  domain = 'devf.mx'
+end
+
+contact_email = dev_mail || "hello@#{domain}"
+support_email = dev_mail || "support@#{domain}"
+
+notify_postulations_to = [ contact_email ]
+if Rails.env.production?
+  notify_postulations_to = [ "hello@#{domain}" ]
+end
+
+%>
+common: &common
+  domain: "<%= domain %>"
+  contact_email: "<%= contact_email %>"
+  support_email: "<%= support_email %>"
+  notify_postulations_to:
+    <% notify_postulations_to.each do |mail| %>
+    - "<%= mail %>"
+    <% end %>
+  default_url_options:
+    :host: "<%= domain %>"
+
+development:
+  <<: *common
+  smtp_settings:
+    :address: "smtp.gmail.com"
+    :port: 587
+    :domain: "gmail.com"
+    :user_name: "devf.hackers@gmail.com"
+    :password: "<%= Rails.application.secrets.smtp_password %>"
+    :authentication: plain
+    :enable_starttls_auto: true
+
+test:
+  <<: *common
+  smtp_settings:
+
+production:
+  <<: *common
+  smtp_settings:

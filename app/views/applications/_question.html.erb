@@ -1,0 +1,10 @@
+<fieldset>
+  <label><%= question.question %></label>
+
+  <% case question.type %>
+  <% when 'textarea' %>
+  <%= f.text_area question.question %>
+  <% when 'select' %>
+  <%= f.select question.question, options_from_collection_for_select(question.options, :to_s, :to_s) %>
+  <% end %>
+</fieldset>
