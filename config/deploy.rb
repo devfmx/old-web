@@ -1,10 +1,11 @@
 set :application, 'devf'
 set :repo_url, %x{git config remote.origin.url}.chomp
 
-#ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+ask :branch, proc { 
+  current = `git rev-parse --abbrev-ref HEAD`.chomp 
+}
 
 set :scm, :git
-set :deploy_via, :remote_cache
 
 set :format, :pretty
 set :log_level, :debug

@@ -1,8 +1,12 @@
-<%= form_for @application do |f| %>
-
-  <%= fields_for :answers do |f| %>
-    <%= render :partial => 'question', :collection => @questions, :locals => {:f => f} %>
-  <% end %>
-
-  <%= f.submit "Apply" %>
-<% end %>
+<div class="applications-new">
+  <div class="wrapper">
+    <div class="cols-12">
+      <%= form_for @application do |f| %>
+        <%= fields_for :answers do |f| %>
+          <%= render :partial => 'question', :collection => @questions, :locals => {:f => f} %>
+        <% end %>
+        <%= f.submit "Apply" %>
+      <% end %>
+    </div>
+  </div>
+</div>

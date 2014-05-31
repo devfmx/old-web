@@ -1,5 +1,21 @@
-<h2>Ingresa con</h2>
 
-<%= link_to "Facebook", user_omniauth_authorize_path(:facebook) %>
-<%= link_to "Twitter", user_omniauth_authorize_path(:twitter) %>
-<%= link_to "Github", user_omniauth_authorize_path(:github) %>
+<div class="home-intro hero-intro">
+  <div class="wrapper">
+    <div class="cols-12">
+      <div class="col col-7">
+        <div class="col-inner">
+          <div class="headline">
+
+            <h1>Ingresa con</h1>
+            <br />
+
+            <%= link_to "Facebook", user_omniauth_authorize_path(:facebook), :class => 'btn' %>
+            <%= link_to "Twitter", user_omniauth_authorize_path(:twitter), :class => 'btn' %>
+            <%= link_to "Github", user_omniauth_authorize_path(:github), :class => 'btn' %> 
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
