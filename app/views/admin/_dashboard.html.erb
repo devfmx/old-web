@@ -1,0 +1,11 @@
+<h1>Latest 20 Applications: <%= link_to "( View all )", admin_batches_path %></h1>
+<% applications = Application.order("created_at desc").last(20) %>
+<% applications.each do |app| %>
+  <p>
+    <% name = "#{app.user.name} at #{app.created_at}" %>
+    <%= link_to name, admin_batch_application_path(app.batch, app) %>
+  </p>
+<% end %>
+
+
+
