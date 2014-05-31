@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   root 'public#index'
 
   resources :applications do
+    get :thanks, on: :collection
   end
 
 end

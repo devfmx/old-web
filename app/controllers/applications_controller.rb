@@ -9,6 +9,7 @@ class ApplicationsController < ApplicationController
   def new
     @questions = batch_questions
     @application = current_batch.applications.build(:user => current_user)
+    @answers = OpenStruct.new(params[:answers] || YAML.load(@application.application_answers || '--- {}'))
   end
 
   def create
@@ -16,9 +17,10 @@ class ApplicationsController < ApplicationController
       :application_answers => YAML.dump(params[:answers].as_json))
     if @application.save
       notify_emails(@application)
-      redirect_to :root
+      redirect_to :action => :thanks
     else
       @questions = batch_questions
+      @answers = OpenStruct.new(params[:answers] || YAML.load(@application.application_answers || '--- {}'))
       render :new
     end
   end

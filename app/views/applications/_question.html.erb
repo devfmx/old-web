@@ -4,12 +4,35 @@
        <div class="section-title">
          <h5><%= question.question %></h5>
          <p>
-           <% case question.type %>
-           <% when 'textarea' %>
-           <%= f.text_area question.question, :rows => 5, :cols => 60 %>
+
+           <%-
+
+           name  = question.question
+           id    = question.id || name.to_url
+           value = @answers.send(id)
+           type  = question.type
+
+           case type
+           when 'name'
+             value = current_user.name if value.blank?
+             type = 'text_field'
+           when 'email'
+             value = current_user.email if value.blank?
+             type = 'text_field'
+           end
+
+           %>
+
+
+           <% case type %>
+           <% when 'text_field' %>
+           <%= f.text_field id, :value => value %>
+           <% when 'text_area' %>
+           <%= f.text_area id, :rows => 5, :cols => 60, :value => value %>
            <% when 'select' %>
-           <%= f.select question.question, options_from_collection_for_select(question.choices, :to_s, :to_s) %>
+           <%= f.select id, options_from_collection_for_select(question.choices, :to_s, :to_s, value) %>
            <% end %>
+
          </p>
        </div>
      </div>

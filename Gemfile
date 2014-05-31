@@ -37,7 +37,6 @@ gem 'capistrano-rvm', group: :development
 gem 'capistrano3-puma', group: :development
 gem 'capistrano-rails', group: :development
 
-# Use debugger
 gem 'pry', group: [:development, :test]
 gem 'foreigner'
 gem 'mysql2'
@@ -47,6 +46,5 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-github'
 gem 'settingslogic'
-
-# Styles
+gem 'stringex'
 gem 'bourbon'
