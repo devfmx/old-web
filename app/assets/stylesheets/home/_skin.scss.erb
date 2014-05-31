@@ -1,0 +1,26 @@
+
+.home-intro {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-image: url(<%= asset_data_uri 'home/hero-intro-angel.jpg' %>);
+
+  .headline {
+    h1 {
+      color: $white;
+    }
+
+    p {
+      color: $white;
+      @include text-size-large;
+    }
+  }
+}
+
+.section-home {
+  .section-title {
+    text-align: center;
+  }
+}
