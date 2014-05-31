@@ -1,0 +1,57 @@
+
+* {
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+}
+
+body {
+  font-family: $font;
+  @include text-size-regular;
+}
+
+p {
+  color: $text;
+  font-weight: 400;
+}
+
+a:link {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $black;
+}
+
+h1 {
+  font-size: 54px;
+  font-weight: 300;
+  line-height: 66px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 13px;
+}
+
+.devf-logo-head {
+  .tagline {
+    @include text-size-small;
+    color: $white;
+  }
+}

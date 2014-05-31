@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Devf</title>
+  <title>Dev.f</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= yield :javascripts %>
   <%= csrf_meta_tags %>
   <meta name="google-site-verification" content="amwGbnGejPvxkZuQ7S0ZORLEzezLNoR1HWzNBZyy_Mk" />
 </head>
 <body>
-
-<%= yield %>
-
+  <header class="main-header">
+    <div class="wrapper">
+      <div class="col-12">
+        <div class="col col-12">
+          <div class="col-inner">
+            <%= link_to root_path, class: 'devf-logo-head' do %>
+              <%= image_tag 'devf-logo.png' %>
+              <span class="tagline">desarrollamos.developers</span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <%= yield %>
 </body>
 </html>

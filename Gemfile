@@ -47,3 +47,6 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-github'
 gem 'settingslogic'
+
+# Styles
+gem 'bourbon'

@@ -1,0 +1,22 @@
+/* Buttons Skeleton
+----------------------------------*/
+.btn {
+  @include inline-block;
+  padding: 0 10px;
+  height: 35px;
+
+  &.btn-medium {
+    height: 45px;
+    padding: 0 20px;
+  }
+
+  &.btn-large {
+    height: 55px;
+    line-height: 45px;
+    padding: 0 20px;
+  }
+
+  &.btn-full {
+    display: block;
+  }
+}
