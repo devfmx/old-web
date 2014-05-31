@@ -1,12 +1,26 @@
-<div class="applications-new">
+<div class="home-intro hero-intro">
   <div class="wrapper">
     <div class="cols-12">
-      <%= form_for @application do |f| %>
-        <%= fields_for :answers do |f| %>
-          <%= render :partial => 'question', :collection => @questions, :locals => {:f => f} %>
-        <% end %>
-        <%= f.submit "Apply" %>
-      <% end %>
+      <div class="col col-7">
+        <div class="col-inner">
+          <div class="headline">
+            <h1>Inscríbete</h1>
+            <p>
+              Cuentanos un poco sobre ti
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+<div class="section-home">
+  <div class="wrapper">
+  <%= form_for @application do |f| %>
+    <%= fields_for :answers do |f| %>
+      <%= render :partial => 'question', :collection => @questions, :locals => {:f => f} %>
+    <% end %>
+    <%= f.submit "Enviar", :class => 'btn btn-primary btn-large' %>
+  <% end %>
   </div>
 </div>
