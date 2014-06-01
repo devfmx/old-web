@@ -14,10 +14,6 @@ class Settings < Settingslogic
     namespace_choice test: developer_email, development: developer_email, production: hello_email
   end
 
-  def error_notifications_to
-    Array namespace_choice(test: developer_email, development: developer_email, production: ATTN_HACKERS)
-  end
-
   def no_reply_email
     namespace_email 'noreply'
   end
