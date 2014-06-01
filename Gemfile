@@ -38,6 +38,7 @@ gem 'capistrano3-puma', group: :development, :require => false
 gem 'capistrano-rails', group: :development, :require => false
 gem 'slackistrano', group: :development, :require => false
 
+gem 'httparty'
 gem 'pry', group: [:development, :test]
 gem 'foreigner'
 gem 'mysql2'
