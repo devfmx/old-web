@@ -1,5 +1,8 @@
 == README
 
+You will need to setup config/database.yml and config/secrets.yml
+Ask vic if you dont know how to do so.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
