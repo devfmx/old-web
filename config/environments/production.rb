@@ -87,8 +87,8 @@ Rails.application.configure do
 
   config.middleware.use ExceptionNotification::Rack, :email => {
     :email_prefix => "[dev.f ERROR] ",
-    :sender_address => %{"dev.f" <noreply@devf.mx>},
-    :exception_recipients => %w{vic@devf.mx kike@devf.mx}
+    :sender_address => Settings.no_reply_email,
+    :exception_recipients => Settings::ATTN_HACKERS
   }, :slack => lambda { |exception, options|
     SlackNotifier.exception_ocurred(exception, options)
   }

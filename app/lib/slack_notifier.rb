@@ -1,4 +1,4 @@
-class SlackNotifier
+class SlackNotifier < Slack::Notifier
 
   include Rails.application.routes.url_helpers
   include ActionView::Helpers::UrlHelper
@@ -30,12 +30,11 @@ class SlackNotifier
 
   def initialize(payload = {})
     payload.merge!(channel: Settings.slack.test) unless Rails.env.production?
-    @client = Slack::Notifier.new Settings.slack.team, 
-      Rails.application.secrets.slack_token, Settings.slack.hook, payload
+    super Settings.slack.team, Rails.application.secrets.slack_token, Settings.slack.hook, payload
   end
 
   def user_registered(user)
-    say "Hello! I'm #{link_to user.name, admin_user_url(user)}, I've just registered",
+    ping "Hello! I'm #{link_to user.name, admin_user_url(user)}, I've just registered",
     username: user.name,
     icon_url: "http://avatars.io/email/#{user.email}",
     attachments: [
@@ -50,7 +49,7 @@ class SlackNotifier
   def application_received(app)
     user = app.user
     batch = app.batch
-    say "I've just filled a #{link_to "new application", admin_batch_application_url(batch, app)} for #{batch.name}",
+    ping "I've just filled a #{link_to "new application", admin_batch_application_url(batch, app)} for #{batch.name}",
     username: user.name,
     icon_url: "http://avatars.io/email/#{user.email}",
     attachments: [
@@ -61,7 +60,7 @@ class SlackNotifier
   def application_decided(app, admin)
     batch = app.batch
     accepted = app.accepted?
-    say "I've just updated #{app.user.name}'s #{link_to "application", admin_batch_application_url(batch, app)} to #{batch.name}",
+    ping "I've just updated #{app.user.name}'s #{link_to "application", admin_batch_application_url(batch, app)} to #{batch.name}",
     username: admin.name,
     icon_url: "http://avatars.io/email/#{admin.email}",
     attachments: [
@@ -73,7 +72,7 @@ class SlackNotifier
 
   def application_rated(app, admin)
     batch = app.batch
-    say "I've just updated #{app.user.name}'s #{link_to "application", admin_batch_application_url(batch, app)} to #{batch.name}",
+    ping "I've just updated #{app.user.name}'s #{link_to "application", admin_batch_application_url(batch, app)} to #{batch.name}",
     username: admin.name,
     icon_url: "http://avatars.io/email/#{admin.email}",
     attachments: [
@@ -86,7 +85,7 @@ class SlackNotifier
       exception.backtrace[1..-1].grep(/#{Rails.root}/)[0..3]].flatten.
       map { |s| s[/[^\/]+:in .*/].gsub(/[\(\<\)\>]/, '').split(/:in /) }.
       map { |a| {title: a.first, value: a.last } }
-    say OOPS.sample, icon_emoji: OOPS_EMOJI.sample,
+    ping OOPS.sample, icon_emoji: OOPS_EMOJI.sample,
     attachments: [
       fallback: exception.class.name,
       text: exception.message,
@@ -103,10 +102,6 @@ class SlackNotifier
   def url_for(options)
     return options if options.kind_of?(String)
     Rails.application.routes.url_for(options.merge(default_url_options))
-  end
-
-  def say(message = nil, payload = {})
-    @client.ping(message, payload)
   end
 
 end

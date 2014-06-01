@@ -1,5 +1,4 @@
 # -*- ruby -*-
-
 squirrels = [
   "https://img.skitch.com/20111026-r2wsngtu4jftwxmsytdke6arwd.png",
   "http://images.cheezburger.com/completestore/2011/11/2/aa83c0c4-2123-4bd3-8097-966c9461b30c.jpg",
@@ -19,10 +18,9 @@ squirrels = [
   "http://f.cl.ly/items/0S1M2d1h0I132S082A05/flying-squirrel.gif"
 ]
 
-set :slack_team, Rails.settings.slack.team
-set :slack_token, Rails.app.secrets.slack_token # comes from inbound webhook integration
+set :slack_team, Settings.slack.team
+set :slack_token, Settings.secrets.slack_token
 
-#set :slack_icon_url,     ->{ squirrels.sample }
 set :slack_icon_emoji,   ->{ ':shipit:' } # will override icon_url
 set :slack_channel,      ->{ '#sitio-web-devf' }
 set :slack_username,     ->{ 'Shipit' }
