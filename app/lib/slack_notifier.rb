@@ -22,14 +22,15 @@ class SlackNotifier < Slack::Notifier
 
     def method_missing(name, *args)
       return unless enabled?
-      new(Settings.slack.send(name)).send(name, *args)
+      payload = Settings.slack.send(name)
+      payload.merge!(channel: Settings.slack.test) unless Rails.env.production?
+      new(payload).send(name, *args)
     rescue => e
       puts e.message, *e.backtrace
     end
   end
 
   def initialize(payload = {})
-    payload.merge!(channel: Settings.slack.test) unless Rails.env.production?
     super Settings.slack.team, Rails.application.secrets.slack_token, Settings.slack.hook, payload
   end
 

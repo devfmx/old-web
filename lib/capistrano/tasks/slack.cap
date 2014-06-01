@@ -1,4 +1,6 @@
 # -*- ruby -*-
+require 'slack-notifier'
+
 squirrels = [
   "https://img.skitch.com/20111026-r2wsngtu4jftwxmsytdke6arwd.png",
   "http://images.cheezburger.com/completestore/2011/11/2/aa83c0c4-2123-4bd3-8097-966c9461b30c.jpg",
@@ -18,15 +20,31 @@ squirrels = [
   "http://f.cl.ly/items/0S1M2d1h0I132S082A05/flying-squirrel.gif"
 ]
 
-set :slack_team, Settings.slack.team
-set :slack_token, Settings.secrets.slack_token
+shipit_notify = lambda do |step|
+  user = Settings.developer_name
+  email = Settings.developer_email
+  github = "http://github.com/vic/devf"
+  env = fetch :rails_env 
+  branch = fetch(:branch)
+  branch_url = "#{github}/commit/#{`git rev-parse #{branch}`.chomp}"
+  message = "#{user} shipping <#{github}|#{fetch :application}> to #{env}"
+  color = {:starting => nil, :finished => 'good', :failed => 'danger'}[step]
+  commit = `git log --format='[#{branch}] %s (<#{github}/commit/%H|%h>) %an %ae' -n 1 #{branch}`.chomp
+  attachments = [color: color, fields: [{title: "deployment #{step} at #{Time.now}", value: commit}]]
+  message += "\n" + squirrels.sample if step == :finished
+  notifier = Slack::Notifier.new(Settings.slack.team, Settings.secrets.slack_token, Settings.slack.hook)
+  notifier.ping message, channel: '#sitio-web-devf', username: 'Shipit', icon_emoji: ':shipit:', attachments: attachments
+end
 
-set :slack_icon_emoji,   ->{ ':shipit:' } # will override icon_url
-set :slack_channel,      ->{ '#sitio-web-devf' }
-set :slack_username,     ->{ 'Shipit' }
-set :slack_run_starting, ->{ true }
-set :slack_run_finished, ->{ true }
-set :slack_run_failed,   ->{ true }
-set :slack_msg_starting, ->{ "#{ENV['USER'] || ENV['USERNAME']} has started deploying branch #{fetch :branch} of #{fetch :application} to #{fetch :rails_env, 'production'}." }
-set :slack_msg_finished, ->{ "#{ENV['USER'] || ENV['USERNAME']} has finished deploying branch #{fetch :branch} of #{fetch :application} to #{fetch :rails_env, 'production'}. #{squirrels.sample}" }
-set :slack_msg_failed,   ->{ "*ERROR!* #{ENV['USER'] || ENV['USERNAME']} failed to deploy branch #{fetch :branch} of #{fetch :application} to #{fetch :rails_env, 'production'}." }
+namespace :slack do
+  namespace :deploy do
+    [:starting, :finished, :failed].each do |name|
+      task(name) { run_locally { shipit_notify[name] } }
+    end
+  end
+end
+
+before 'deploy:starting', 'slack:deploy:starting'
+after  'deploy:finished', 'slack:deploy:finished'
+after  'deploy:failed',   'slack:deploy:failed'
+

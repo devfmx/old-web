@@ -23,7 +23,6 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/puma'
 #require 'capistrano/puma/jungle'
-require 'slackistrano'
 
 require './app/lib/settings'
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.

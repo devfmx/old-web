@@ -36,7 +36,6 @@ gem 'puma'
 gem 'capistrano-rvm', group: :development, :require => false
 gem 'capistrano3-puma', group: :development, :require => false
 gem 'capistrano-rails', group: :development, :require => false
-gem 'slackistrano', group: :development, :require => false
 
 gem 'httparty'
 gem 'pry', group: [:development, :test]
