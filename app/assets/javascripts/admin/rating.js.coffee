@@ -1,10 +1,10 @@
 
 rating_options = {
   number: 5,
-  path: '/assets/raty/img/',
+  path: '/assets/raty/img',
   cancel    : true,
-  cancelOff : 'cancel-off.png',
-  cancelOn  : 'cancel-on.png',
+  cancelOff : "cancel-off.png",
+  cancelOn  : "cancel-on.png",
 }
 
 colRating = ->

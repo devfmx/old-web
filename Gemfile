@@ -48,3 +48,4 @@ gem 'omniauth-github'
 gem 'settingslogic'
 gem 'stringex'
 gem 'bourbon'
+gem "non-stupid-digest-assets"
