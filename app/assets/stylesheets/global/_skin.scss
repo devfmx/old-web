@@ -49,6 +49,10 @@ h6 {
   font-size: 13px;
 }
 
+hr {
+  border-top: 0px; 
+}
+
 .devf-logo-head {
   .tagline {
     @include text-size-small;

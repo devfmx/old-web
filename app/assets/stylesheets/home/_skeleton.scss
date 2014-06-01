@@ -3,10 +3,13 @@
   padding: 150px 0;
 }
 
-.section-home {
-  padding: 100px 0;
-
+.section {
+  margin-bottom: 100px;
   .section-title {
+    padding-top: 100px;
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
