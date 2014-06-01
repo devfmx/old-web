@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dev.f</title>
+  <%= stylesheet_link_tag    'email', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'email', 'data-turbolinks-track' => true %>
+  <%= yield :javascripts %>
+</head>
+<body>
+  <%= yield %>
+</body>
+</html>

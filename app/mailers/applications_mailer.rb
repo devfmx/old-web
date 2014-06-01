@@ -1,5 +1,8 @@
 class ApplicationsMailer < ActionMailer::Base
+
   default from: Settings.contact_email
+  helper :application, :social_share
+  layout 'email'
 
   def default_url_options
     Settings.default_url_options

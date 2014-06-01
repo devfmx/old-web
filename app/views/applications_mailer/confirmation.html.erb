@@ -1,35 +1,47 @@
 <p>Hola <%= @user.name %>,</p>
 
 <p>
-  Hemos recibido tu postulación al programa <%= @batch.name %> en <%= link_to "DevF", root_url(:host => Settings.domain) %>. 
+  Hemos recibido tu postulación al programa <%= @batch.name %> en <%= link_to_devf %>. 
 </p>
 
 <p>
-  Revisaremos tu aplicación a la brevedad, mientras tanto puedes revisar los siguientes enlaces:
-  <ul>
-    <li>
-      <a href='#'>Mentores</a>
-      <a href='#'>How to become a hacker</a>
-      <a href='#'>Hackers and Painters</a>
-      <a href='#'>Software is eating the world</a>
-    </li>
-  </ul>
+ Revisaremos tu postulación lo más pronto posible, te pedimos un poco de paciencia. 
+
+ <br/>
+ Mientras tanto, puedes revisar los siguientes enlaces:
+ <ul>
+ <% Settings.interesting_links.each_pair do |name, url| %>
+  <li><%= link_to name, url %></li>
+ <% end %>
+ </ul>
+
+ <br />
+ Pero sobre todo: comienza a aprender y a crear por ti mismo. 
+ Recuerda que una de las cosas que más nos interesa es la iniciativa y ganas de construir que tienes.
+
+ <br/>
+ Sorprendenos, y cuentanos que cosas increibles aprendiste o hiciste mientras
+ nos poniamos en contacto contigo.
+
+ <br />
+ O invita a participar a tus amigos, el mundo es mucho mejor cuando lo compartes
+ con personas que se divierten haciendo lo que tú haces.
 </p>
 
 <p>
- O invita a participar a tus amigos, y obten un descuento por cada uno que sea aceptado.
+ Puedes compartir el siguiente enlace con tus amigos: <br />
+ <%= link_to root_url, root_url %>
 </p>
+
 <p>
- <small>Utiliza el siguiente enlace</small>
- <a href='#'>http://dev.mx/algun-promo-code</a>
-</p>
-<p>
- <a href='#'>Compartir con Facebook</a>
- <a href='#'>Compartir con Twitter</a>
+ O utilizar alguna de tus redes sociales: <br />
+ <% social_share_urls('Acabo de anotarme para entrar al programa de Devf', root_url, :facebook, :twitter) do |name, url| %>
+   <%= link_to name, url %>
+ <% end %>
 </p>
 
 <p>
   ¡Pronto nos pondremos en contacto contigo!
-  Defv,
+  <%= link_to_devf %>,
   desarrollamos(developers);
 </p>
