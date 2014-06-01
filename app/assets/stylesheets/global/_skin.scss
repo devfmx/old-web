@@ -54,4 +54,7 @@ h6 {
     @include text-size-small;
     color: $white;
   }
+  .devf-logo {
+    background-image: $devf-logo;
+  }
 }

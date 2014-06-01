@@ -7,6 +7,60 @@
   <%= yield :javascripts %>
 </head>
 <body>
-  <%= yield %>
+  <header class="main-header">
+    <div class="wrapper">
+      <div class="col-12">
+        <div class="col col-12">
+          <div class="col-inner">
+            <%= link_to root_path, class: 'devf-logo-head' do %>
+              <i class='devf-logo'></i>
+              <span class="tagline"><%= Settings.tagline %></span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<div class="home-intro hero-intro">
+  <div class="wrapper">
+    <div class="cols-12">
+      <div class="col col-7">
+        <div class="col-inner">
+          <div class="headline">
+            <h1><%= yield :title %></h1>
+            <p><%= yield :subtitle %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section-home">
+  <div class="wrapper">
+    <div class="cols-12">
+      <div class="col col-12">
+        <div class="col-inner">
+          <%= yield %> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='signature'>
+ <div class="wrapper">
+    <div class="cols-12">
+      <div class="col col-7">
+        <div class="col-inner">
+           <code>--</code><br/>
+           <small>
+             <%= link_to_devf %><br />
+             <%= Settings.tagline %>
+           </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

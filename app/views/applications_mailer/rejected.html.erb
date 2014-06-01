@@ -1,14 +1,17 @@
-<p>¡Hola <%= @user.name %>!</p>
+<% content_for :title do %> 
+  Hola <%= @user.name %>
+<% end %>
+<% content_for :subtitle do %>
+<% end %>
 
 <p>
-  Lamentamos informarte que no fue posible asegurar un lugar para tí en <%= @batch.name %>en <%= link_to "DevF", root_url(:host => Settings.domain) %>. No lo tomes personal, las aplicaciones que recibimos fueron muy buenas y el espacio que tenemos para cada batch es limitado. Esperamos que en el futuro, tengamos los recursos suficientes para invitar a todos los aplicantes.
+  Lamentamos informarte que no fue posible asegurar un lugar para tí en <%= @batch.name %> en <%= link_to "DevF", root_url(:host => Settings.domain) %>. No lo tomes personal, las aplicaciones que recibimos fueron muy buenas y el espacio que tenemos para cada batch es limitado. Esperamos que en el futuro, tengamos los recursos suficientes para invitar a todos los aplicantes.
 </p>
 
 <p>
-  ¡Demuéstranos que estamos equivocados, y que eres un gran hacker aplicando la próxima ocasión con más código que mostrar!
+  ¡Demuéstranos que estamos equivocados, no dejes de contactarnos y presume lo que has construido,
+  si nos impresiona lo que haces, seguro que haremos un espacio para ti!
 </p>
 
-<p>
-  Devf,
-  desarrollamos(personas);
-</p>
+
+<p>Saludos!</p>

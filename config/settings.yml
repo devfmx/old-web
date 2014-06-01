@@ -5,6 +5,7 @@ developer_email = %x(git config user.email).chomp rescue "developer@devf.test"
 common: &common
   developer_name: "<%= developer_name %>"
   developer_email: "<%= developer_email %>"
+  tagline: "Desarrollamos(developers);"
   interesting_links:
     "The Hacker Attitude": "http://www.catb.org/esr/faqs/hacker-howto.html#attitude"
     "Great Hackers": "http://www.paulgraham.com/gh.html"

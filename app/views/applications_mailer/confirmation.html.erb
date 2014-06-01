@@ -1,29 +1,28 @@
-<p>Hola <%= @user.name %>,</p>
+<% content_for :title do %>
+  Hola <%= @user.name %>
+<% end %>
+<% content_for :subtitle do %>
+  Hemos recibido tu postulación al programa <%= @batch.name %>
+<% end %>
 
-<p>
-  Hemos recibido tu postulación al programa <%= @batch.name %> en <%= link_to_devf %>. 
-</p>
+<p>Revisaremos tu postulación lo más pronto posible, te pedimos un poco de paciencia.</p>
+<p>Mientras tanto, puedes revisar los siguientes enlaces:</p>
 
-<p>
- Revisaremos tu postulación lo más pronto posible, te pedimos un poco de paciencia. 
-
- <br/>
- Mientras tanto, puedes revisar los siguientes enlaces:
- <ul>
+<br/>
+<ul>
  <% Settings.interesting_links.each_pair do |name, url| %>
   <li><%= link_to name, url %></li>
  <% end %>
- </ul>
+</ul>
+<br/>
 
- <br />
- Pero sobre todo: comienza a aprender y a crear por ti mismo. 
- Recuerda que una de las cosas que más nos interesa es la iniciativa y ganas de construir que tienes.
+<p>Pero sobre todo: comienza a aprender y a crear por ti mismo.</p>
+<p>Recuerda que una de las cosas que más nos interesa es la iniciativa y ganas de construir que tienes.</p>
 
- <br/>
- Sorprendenos, y cuentanos que cosas increibles aprendiste o hiciste mientras
- nos poniamos en contacto contigo.
+<p>Sorprendenos, y cuentanos que cosas increibles aprendiste o hiciste mientras
+ nos poniamos en contacto contigo.</p>
 
- <br />
+<p>
  O invita a participar a tus amigos, el mundo es mucho mejor cuando lo compartes
  con personas que se divierten haciendo lo que tú haces.
 </p>
@@ -40,8 +39,4 @@
  <% end %>
 </p>
 
-<p>
-  ¡Pronto nos pondremos en contacto contigo!
-  <%= link_to_devf %>,
-  desarrollamos(developers);
-</p>
+<p>¡Pronto nos pondremos en contacto contigo!</p>

@@ -26,7 +26,10 @@ p + p {
 }
 
 .devf-logo-head {
-  img {
+  .devf-logo {
     display: block;
+    width: 102px;
+    height: 43px;
+    content: "";
   }
 }

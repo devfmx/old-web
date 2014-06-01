@@ -11,7 +11,7 @@ class Settings < Settingslogic
   end
 
   def notify_postulations_to
-    namespace_choice test: developer_email, development: developer_email, production: hello_email
+    namespace_choice test: developer_email, development: developer_email, production: contact_email
   end
 
   def no_reply_email

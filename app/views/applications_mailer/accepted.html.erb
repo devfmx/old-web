@@ -1,14 +1,14 @@
-<p>¡Hola <%= @user.name %>!</p>
+<% content_for :title do %> 
+  ¡Hola <%= @user.name %>! 
+<% end %>
+<% content_for :subtitle do %>
+  Bienvenido al programa <%= @batch.name %>      
+<% end %>
 
 <p>
-  Estamos muy felices de darte la noticia de que has sido aceptado al programa <%= @batch.name %> en <%= link_to "DevF", root_url(:host => Settings.domain) %>
+  Estamos muy felices de darte la noticia de que has sido aceptado al programa <%= @batch.name %> en <%= link_to_devf %>
 </p>
 
 <p>
   ¡Te esperamos el dia <%= @batch.starts_at %> en Centraal, ubicado en Zamora 187, Colonia Condesa, México D.F. a las 3pm.
-</p>
-
-<p>
-  Devf,
-  Desarrollamos(developers); 
 </p>
