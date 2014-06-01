@@ -32,7 +32,10 @@ ActiveAdmin.register Application do
     app = Application.find(params[:id])
     app.rating = params[:rating].to_i
     saved = app.save
-    render :text => saved, :status => app.save ? 200 : 500
+    if saved
+      SlackNotifier.application_rated(app, current_user)
+    end
+    render :text => saved, :status => saved ? 200 : 500
   end 
 
   member_action :accept, :method => :put do
@@ -67,6 +70,7 @@ ActiveAdmin.register Application do
         notice = accepted ? "Accepted" : "Rejected"
         notice += "! A notification email has been sent to #{app.user.email}"
         redirect_to({:action => :show}, {:notice => notice})
+        SlackNotifier.application_decided(app, current_user)
       else
         redirect_to({:action => :show}, {:notice => app.errors.full_messages.join(',')})
       end

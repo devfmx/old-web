@@ -19,8 +19,9 @@ squirrels = [
   "http://f.cl.ly/items/0S1M2d1h0I132S082A05/flying-squirrel.gif"
 ]
 
-set :slack_token, "8jlTCVSt0lQuxqM81kOtuz4a" # comes from inbound webhook integration
-set :slack_team, "devf"
+set :slack_team, Rails.settings.slack.team
+set :slack_token, Rails.app.secrets.slack_token # comes from inbound webhook integration
+
 #set :slack_icon_url,     ->{ squirrels.sample }
 set :slack_icon_emoji,   ->{ ':shipit:' } # will override icon_url
 set :slack_channel,      ->{ '#sitio-web-devf' }

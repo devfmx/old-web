@@ -34,7 +34,21 @@ common: &common
     <% end %>
   default_url_options:
     :host: "<%= domain %>"
-
+  slack:
+    team: devf
+    hook: incoming-webhook
+    test: '#prueba'
+    exception_ocurred:
+      channel: '#sitio-web-devf'
+      username: "Boomer"
+    new_user_registered:
+      channel: "#general"
+    application_received:
+      channel: "#general"
+    application_decided:
+      channel: '#general'
+    application_rated:
+      channel: '#general'
 development:
   <<: *common
   smtp_settings:

@@ -51,4 +51,5 @@ gem 'settingslogic'
 gem 'stringex'
 gem 'bourbon'
 gem "non-stupid-digest-assets"
-
+gem 'exception_notification'
+gem 'slack-notifier'
