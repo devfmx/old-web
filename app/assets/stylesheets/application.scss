@@ -1,31 +1,5 @@
-
-// Fonts
-@import "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800";
-
-// Dependencies
-
-@import "bourbon";
-
-// Mixins
-@import "mixins/mixins";
-@import "mixins/media-queries";
-
-// Global Styles
-@import "global/vars";
-@import "global/embedded";
-@import "global/reset";
-@import "global/skeleton";
-@import "global/skin";
-@import "global/grid";
-
-// Homepage
-@import "home/skeleton";
-@import "home/skin";
+@import "common";
 
 // Apply form
 @import "applications/skeleton";
 @import "applications/skin";
-
-// Buttons
-@import "buttons/skeleton";
-@import "buttons/skin";
