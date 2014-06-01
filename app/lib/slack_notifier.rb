@@ -59,13 +59,12 @@ class SlackNotifier < Slack::Notifier
 
   def application_decided(app, admin)
     batch = app.batch
-    accepted = app.accepted?
     ping "I've just updated #{app.user.name}'s #{link_to "application", admin_batch_application_url(batch, app)} to #{batch.name}",
     username: admin.name,
     icon_url: "http://avatars.io/email/#{admin.email}",
     attachments: [
-      color: accepted ? 'good' : 'danger',
-      fields: [{title: accepted ? 'Accepted' : 'Rejected'}]
+      color: app.accepted ? 'good' : 'danger',
+      fields: [{title: {true => 'Accepted', false => 'Rejected', nil => 'Pending'}[app.accepted]}]
     ]    
   end
 
