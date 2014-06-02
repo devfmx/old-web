@@ -2,11 +2,9 @@
 <html>
 <head>
   <title>Dev.f</title>
-  <%= stylesheet_link_tag    'email', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'email', 'data-turbolinks-track' => true %>
-  <%= yield :javascripts %>
 </head>
 <body>
+  <style><%= Rails.application.assets.find_asset('email.css') %></style>
   <header class="main-header">
     <div class="wrapper">
       <div class="col-12">
