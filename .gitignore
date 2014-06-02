@@ -18,3 +18,4 @@ config/database*
 config/secrets*
 public/assets
 db/structure.sql
+.DS_Store
