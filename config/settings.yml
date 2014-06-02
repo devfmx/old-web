@@ -16,7 +16,7 @@ common: &common
     exception_ocurred:
       channel: '#sitio-web-devf'
       username: "Boomer"
-    new_user_registered:
+    user_registered:
       channel: "#general"
     application_received:
       channel: "#general"
