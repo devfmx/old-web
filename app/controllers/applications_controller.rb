@@ -18,7 +18,7 @@ class ApplicationsController < ApplicationController
     if @application.save
       notify_emails(@application)
       redirect_to :action => :thanks
-      SlackNotifier.application_received(application)
+      SlackNotifier.application_received(@application)
     else
       @questions = batch_questions
       @answers = OpenStruct.new(params[:answers] || YAML.load(@application.application_answers || '--- {}'))
