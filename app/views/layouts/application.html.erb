@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= yield :javascripts %>
   <%= csrf_meta_tags %>
-  <meta name="google-site-verification" content="amwGbnGejPvxkZuQ7S0ZORLEzezLNoR1HWzNBZyy_Mk" />
+  <%= render :partial => :google_tracking %>
 </head>
 <body>
   <header class="main-header">
