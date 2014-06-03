@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= yield :javascripts %>
   <%= csrf_meta_tags %>
-  <%= render :partial => :google_tracking %>
+  <%= render :partial => 'layouts/google_tracking' %>
 </head>
 <body>
   <header class="main-header">
