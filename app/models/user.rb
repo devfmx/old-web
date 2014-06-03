@@ -8,7 +8,9 @@ class User < ActiveRecord::Base
 
   class << self
     def find_or_build_for_identity(identity, user=nil)
-      user ||= Identity.find_by_email(identity.email).try(:user) || User.find_by_email(identity.email)
+      if identity.email.present?
+        user ||= Identity.find_by_email(identity.email).try(:user) || User.find_by_email(identity.email)
+      end
       unless user
         token = Devise.friendly_token[0,20]
         user = User.new(:name => identity.name, :email => identity.email, :password => token, :password_confirmation => token)
