@@ -6,12 +6,13 @@
 
 body {
   font-family: $font;
-  @include text-size-regular;
+  font-size: 14px;
 }
 
 p {
   color: $text;
   font-weight: 400;
+  @include text-size-regular;
 }
 
 a:link {

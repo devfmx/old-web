@@ -1,9 +1,4 @@
-
 // Grid
-$fg-column: 60px;
-$fg-gutter: 20;
-$fg-max-columns: 12;
-
 .cols-12 {
   @include clearfix;
 
@@ -37,10 +32,6 @@ $fg-max-columns: 12;
 
 @for $i from 1 through 12 {
   .col-#{$i} {
-    width: flex-grid($i);
+    width: 100% / 12% * $i * 1%;
   }
-}
-
-.col-4 {
-  width: 33.333%;
 }
