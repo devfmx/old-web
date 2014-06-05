@@ -25,11 +25,35 @@ p + p {
   padding: 25px 0;
 }
 
-.devf-logo-head {
-  .devf-logo {
-    display: block;
-    width: 102px;
-    height: 43px;
-    content: "";
+.devf-logo {
+  display: block;
+  width: 102px;
+  height: 43px;
+  content: "";
+}
+
+.devf-logo-gray {
+  @extend .devf-logo
+}
+
+.footer {
+  .footer-top {
+    padding: 40px 0;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+  }
+
+  .devf-logo-footer {
+    float: right;
+
+    .devf-logo-gray {
+      float: right;
+    }
+
+    .tagline {
+      display: block;
+    }
   }
 }

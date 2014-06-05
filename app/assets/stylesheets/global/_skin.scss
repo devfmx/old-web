@@ -63,3 +63,36 @@ hr {
     background-image: $devf-logo;
   }
 }
+
+.devf-logo-gray {
+  background-image: $devf-logo-gray;
+}
+
+
+.footer {
+  background: #ecf0f2; 
+
+  .footer-top {
+    border-bottom: 1px solid #d9dddf;
+  }
+
+  .devf-brand-footer {
+    text-align: right;
+      
+    .tagline {
+      color: #c0c6c9;
+      font-size: 12px;
+    }
+  }
+
+  h5 {
+    text-transform: uppercase;
+    color: $meta;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .sponsors {
+    text-align: center;
+  }
+}

@@ -9,19 +9,19 @@
   type: phone
 -
   question: "¿Dónde vives? (delegación, ciudad, estado, etc.)"
-  type: textarea
+  type: text_area
 -
   question: "Si no existiera tecnología, ¿que te gustaría crear o construir?"
-  type: textarea
+  type: text_area
 -
   question: "¿Por qué quieres tomar el curso de Dev.F.?"
-  type: textarea
+  type: text_area
 -
   question: "¿Qué es lo más interesante o fascinante que has aprendido en el último mes?"
-  type: textarea
+  type: text_area
 -
   question: "¿Qué haces en tu tiempo libre?"
-  type: textarea
+  type: text_area
 -
   question: "¿Cómo escuchaste de Dev.F.?"
   type: select
@@ -32,10 +32,10 @@
     - Otro
 -
   question: "¿Qué experiencia o aprendizaje previo has tenido en programación?"
-  type: textarea
+  type: text_area
 -
   question: "¿Estudias una carrera técnica o has tomado algún curso en línea de programación?"
-  type: textarea
+  type: text_area
 -
   question: "Comparte con nosotros algun enlace a GitHub, Twitter o cualquier pagina sobre ti"
-  type: textarea
+  type: text_area

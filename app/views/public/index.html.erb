@@ -5,15 +5,8 @@
         <div class="col-inner">
           <div class="headline">
             <h1>Hackea tu verano, desarrolla el futuro.</h1>
-            <br>
-
             <p>Dev.f es la escuela para crear y desarrollar soluciones a problemas del mundo real, utilizando las herramientas tecnológicas del momento.</p>
-            <br>
-
-            <p>
-            Estamos en la ciudad y el tiempo indicados.
-            </p>
-
+            <p>Estamos en la ciudad y el tiempo indicados.</p>
             <p>Nuestro secreto:Más que desarrollar tecnología, desarrollamos personas.</p>
             <br>
             <%= link_to "Aplica hoy a DevF".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
@@ -23,7 +16,25 @@
     </div>
   </div>
 </div>
-<div class="section manifest">
+<div class="topbar-wrap">
+  <div class="topbar">
+    <div class="wrapper cols-12">
+      <div class="col col-3">
+        <div class="col-inner"><a href="">Manifesto</a></div>
+      </div>
+      <div class="col col-3">
+        <div class="col-inner"><a href="">Curo Cinta Blanca</a></div>
+      </div>
+      <div class="col col-3">
+        <div class="col-inner"><a href="">Tus Senseis</a></div>
+      </div>
+      <div class="col col-3">
+        <div class="col-inner"><a href="">Aplica Hoy</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section manifest wow fadeIn">
   <div class="wrapper">
     <div class="cols-12">
       <div class="col col-12">
@@ -59,10 +70,8 @@
     </div>
   </div>
 </div>
-
-<div class="image-separator img-s-1"></div>
-
-<div class="section program">
+<div class="image-separator data-image img-s-1"></div>
+<div class="section program wow fadeIn">
   <div class="wrapper">
     <div class="cols-12">
       <div class="col col-12">
@@ -74,7 +83,6 @@
         </div>
       </div>
     </div>
-
     <div class="cols-12">
       <div class="col col-4 program-item">
         <div class="col-inner">
@@ -117,10 +125,8 @@
     </div>    
   </div>
 </div>
-
 <div class="image-separator img-s-2"></div>
-
-<div class="section facilitators">
+<div class="section facilitators wow fadeIn">
   <div class="wrapper">
     <div class="cols-12">
       <div class="col col-12">
@@ -157,25 +163,9 @@
     </div>    
   </div>
 </div>   
-
 <div class="image-separator img-s-3"></div>
-
-<!-- <div class="places">
-  <div class="wrapper">
-    <div class="cols-12">
-      <div class="col col-12">
-        <div class="col-inner">
-          <%=image_tag("home/centraal.png")%>
-          <%=image_tag("home/the-pool.png")%>
-          <%=image_tag("home/impact-hub.png")%>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <div class="section signup">
-  <div class="wrapper">
+  <div class="wrapper wow pulse" data-wow-delay=".8s">
     <div class="cols-12">
       <div class="col col-4 details">
         <div class="col-inner">
@@ -188,7 +178,7 @@
         <div class="col-inner">
           <h2>Inscríbete</h2>
           <span class="old-price">$29,999 MXN</span>
-          <h3 class="introduction-price">$14,000 MXN</h3>
+          <h3 class="introduction-price">$14,999 MXN <span>Precio Introducción</span></h3>
           <%= link_to "Aplica hoy a DevF".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
         </div>
       </div>
@@ -202,8 +192,35 @@
     </div>  
   </div>
 </div>    
-
-
-
-
-    
+<div class="footer">
+  <div class="footer-top">
+    <div class="wrapper">
+      <div class="cols-12">
+        <div class="col col-6">
+          <div class="col-inner">
+            <h5>Contactanos</h5>
+            <p>Estamos encantados de responder cualquier pregunta que usted pueda tener acerca de Dev.f.</p> <br>
+            <a href="mailto:hola@devf.mx">hola@devf.mx</a>
+          </div>
+        </div>
+        <div class="col col-6 devf-brand-footer">
+          <div class="col-inner">
+            <%= link_to root_path, class: 'devf-logo-footer' do %>
+              <i class='devf-logo-gray'></i>
+              <span class="tagline"><%= Settings.tagline %></span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrapper">
+      <div class="cols-12">
+        <div class="col col-12 col-inner sponsors">
+          <%= image_tag 'g-devs.png' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
