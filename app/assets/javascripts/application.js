@@ -5,7 +5,9 @@
 //= require_tree ./vendor
 
 var onLoaded = function() {
-  new WOW().init();
+  if ( ! $.browser.mobile ) {
+    new WOW().init();
+  };
 
   var hero = $('.hero-intro'),
       heroH = hero.outerHeight(),

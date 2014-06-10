@@ -170,7 +170,7 @@ home
 <div class="section signup" id="apply">
   <div class="wrapper wow pulse" data-wow-delay=".3s">
     <div class="cols-12">
-      <div class="col col-4 details">
+      <div class="col col-4 details details-top">
         <div class="col-inner">
           <%= image_tag("home/calendar.png") %>
           <h4>Horario y fecha</h4>
@@ -183,6 +183,13 @@ home
           <span class="old-price">$29,999 MXN</span>
           <h3 class="introduction-price">$14,999 MXN <span>Precio Introducción</span></h3>
           <%= link_to "Aplica hoy a dev.f".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
+        </div>
+      </div>
+      <div class="col col-4 details details-bottom">
+        <div class="col-inner">
+          <%= image_tag("home/calendar.png") %>
+          <h4>Horario y fecha</h4>
+          <p>De lunes a viernes de 3pm a 9pm <br> 7 de Julio al 2 de Agosto de 2014.</p>
         </div>
       </div>
       <div class="col col-4 details">

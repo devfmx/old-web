@@ -12,6 +12,14 @@
   .section-title {
     margin-bottom: 50px;
   }
+
+  @include max-screen(630px) {
+    padding-bottom: 90px;
+
+    .col {
+      margin-bottom: 50px;
+    }
+  }
 }
 
 .image-separator {
@@ -53,6 +61,24 @@
     .introduction-price {
       margin-bottom: 35px;
     }
+  }
+
+  .details-top {
+    display: block;
+  }
+
+  .details-bottom {
+    display: none;
+  }
+
+  @include max-screen(630px) {
+    .details-top {
+      display: none;
+    }
+
+    .details-bottom {
+      display: block;
+    }    
   }
 }
 

@@ -2,14 +2,28 @@
 <div class="home-intro hero-intro">
   <div class="wrapper">
     <div class="cols-12">
-      <div class="col col-7">
+      <div class="col col-12">
         <div class="col-inner">
           <div class="headline">
             <h1>Ingresa con</h1><br>
-            <%= link_to "Facebook", user_omniauth_authorize_path(:facebook), :class => 'btn btn-primary btn-large' %>
-            <%= link_to "Twitter", user_omniauth_authorize_path(:twitter), :class => 'btn btn-primary btn-large' %>
-            <%= link_to "Github", user_omniauth_authorize_path(:github), :class => 'btn btn-primary btn-large' %> 
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="cols-12">
+      <div class="col col-4">
+        <div class="col-inner">
+          <%= link_to "Facebook", user_omniauth_authorize_path(:facebook), :class => 'btn btn-primary btn-large btn-full' %> <br>
+        </div>
+      </div>
+      <div class="col col-4">
+        <div class="col-inner">
+          <%= link_to "Twitter", user_omniauth_authorize_path(:twitter), :class => 'btn btn-primary btn-large btn-full' %> <br>
+        </div>
+      </div>
+      <div class="col col-4">
+        <div class="col-inner">
+          <%= link_to "Github", user_omniauth_authorize_path(:github), :class => 'btn btn-primary btn-large btn-full' %> <br>
         </div>
       </div>
     </div>
