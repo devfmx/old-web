@@ -9,19 +9,18 @@ class ApplicationsController < ApplicationController
   def new
     @questions = batch_questions
     @application = current_batch.applications.build(:user => current_user)
-    @answers = OpenStruct.new(params[:answers] || YAML.load(@application.application_answers || '--- {}'))
+    @answers = @application.answers
   end
 
   def create
-    @application = current_batch.applications.create(:user => current_user, 
-      :application_answers => YAML.dump(params[:answers].as_json))
+    @application = current_batch.applications.create(:user => current_user, :answers => params[:answers])
     if @application.save
       notify_emails(@application)
       redirect_to :action => :thanks
       SlackNotifier.application_received(@application)
     else
       @questions = batch_questions
-      @answers = OpenStruct.new(params[:answers] || YAML.load(@application.application_answers || '--- {}'))
+      @answers = @application.answers
       render :new
     end
   end

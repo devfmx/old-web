@@ -1,0 +1,8 @@
+<% if object.errors.present? %>
+ <div id='errors'>
+   <h5>Han ocurrido los siguientes errores: </h5>
+   <% object.errors.full_messages.each do |msg| %>
+     <%= msg %><br />
+   <% end %>
+ </div>
+<% end %>
