@@ -38,5 +38,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = Settings.smtp_settings
   config.action_mailer.default_url_options = {:host => Settings.domain}
+
+  config.action_controller.asset_host = "http://" + Settings.domain
   
 end
