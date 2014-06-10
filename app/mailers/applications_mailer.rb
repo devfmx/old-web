@@ -19,21 +19,21 @@ class ApplicationsMailer < ActionMailer::Base
     @application = application
     @user  = application.user
     @batch = application.batch
-    mail to: @user.email
+    mail to: application.answers.email
   end
 
   def accepted(application)
     @application = application
     @user  = application.user
     @batch = application.batch
-    mail to: @user.email
+    mail to: application.answers.email
   end
 
   def rejected(application)
     @application = application
     @user  = application.user
     @batch = application.batch
-    mail to: @user.email
+    mail to: application.answers.email
   end
 
 end
