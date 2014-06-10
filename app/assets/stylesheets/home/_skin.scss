@@ -1,3 +1,31 @@
+.home {
+  .main-header {
+    background: rgba(0, 0, 0, .5);
+    border-bottom-color: transparent;
+
+    .devf-logo {
+      background-image: $devf-logo;
+    }
+
+    .tagline {
+      color: $white;
+    }
+
+    &.active {
+      background: $white;
+      border-bottom: 1px solid #f2f2f2;
+
+      .tagline {
+        @include text-size-small;
+        color: $meta;
+      }
+      
+      .devf-logo {
+        background-image: $devf-logo-black;
+      }
+    }
+  }
+}
 
 .cover-photo {
   background-position: center center;
@@ -74,7 +102,7 @@
     text-align: center;
 
     h2 {
-      font-size: 52px;
+      font-size: 46px;
     }
 
     .old-price {
@@ -98,9 +126,21 @@
   .topbar {
     background: #fff;
     border-bottom: 1px solid #f2f2f2;
+    @include transition (box-shadow .5s ease-in-out);
 
+  
     .col-inner {
+      border-right: 1px solid #f2f2f2;
       text-align: center;
+      @include transition (all .2s ease-in-out);
+
+      &:hover {
+        background: tint($primary-color, 95%);
+      }
+    }
+
+    .col:first-child .col-inner {
+      border-left: 1px solid #f2f2f2;
     }
 
     a {
@@ -110,5 +150,21 @@
       font-size: 14px;
       font-weight: 700;
     }
+
+    &.active {
+      box-shadow: 0 1px 5px rgba(0,0,0,.05);
+    }
   } 
+}
+
+// Questions
+.questions {
+
+  .question {
+    margin-bottom: 30px;
+
+    label {
+      @include text-size-regular;
+    }
+  }
 }

@@ -1,64 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dev.f</title>
 </head>
 <body>
-  <style><%= Rails.application.assets.find_asset('email.css') %></style>
-  <header class="main-header">
-    <div class="wrapper">
-      <div class="col-12">
-        <div class="col col-12">
-          <div class="col-inner">
-            <%= link_to root_path, class: 'devf-logo-head' do %>
-              <i class='devf-logo'></i>
-              <span class="tagline"><%= Settings.tagline %></span>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-<div class="home-intro hero-intro">
-  <div class="wrapper">
-    <div class="cols-12">
-      <div class="col col-7">
-        <div class="col-inner">
-          <div class="headline">
-            <h1><%= yield :title %></h1>
-            <p><%= yield :subtitle %></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section-home">
-  <div class="wrapper">
-    <div class="cols-12">
-      <div class="col col-12">
-        <div class="col-inner">
+  <div style="width: 600px; margin: 0 auto;">
+    <table width="600px" align="center" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+            <span style="font-size: 14px; font-weight: bold; display: block;">Dev.<i style="font-weight: normal;">f</i></span>
+            <span class="tagline"><%= Settings.tagline %></span>
+        </td>
+      </tr>
+    </table>
+    <table width="600px" align="center" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+          <h1 style="font-size: 36px;"><%= yield :title %></h1>
+          <h4 style="font-size: 22px;"><%= yield :subtitle %></h4>
           <%= yield %> 
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class='signature'>
- <div class="wrapper">
-    <div class="cols-12">
-      <div class="col col-7">
-        <div class="col-inner">
-           <code>--</code><br/>
+          <br>
+          <br>
+          <code>--</code><br>
            <small>
              <%= link_to_devf %><br />
              <%= Settings.tagline %>
            </small>
-        </div>
-      </div>
-    </div>
+        </td>
+      </tr>
+    </table>
   </div>
-</div>
-
 </body>
 </html>

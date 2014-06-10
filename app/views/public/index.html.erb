@@ -1,3 +1,6 @@
+<% content_for :body_classes do %>
+home
+<% end %>
 <div class="home-intro hero-intro">
   <div class="wrapper">
     <div class="cols-12">
@@ -7,9 +10,9 @@
             <h1>Hackea tu verano, desarrolla el futuro.</h1>
             <p>Dev.f es la escuela para crear y desarrollar soluciones a problemas del mundo real, utilizando las herramientas tecnológicas del momento.</p>
             <p>Estamos en la ciudad y el tiempo indicados.</p>
-            <p>Nuestro secreto:Más que desarrollar tecnología, desarrollamos personas.</p>
+            <p>Nuestro secreto: Más que desarrollar tecnología, desarrollamos personas.</p>
             <br>
-            <%= link_to "Aplica hoy a DevF".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
+            <%= link_to "Aplica hoy a dev.f".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
           </div>
         </div>
       </div>
@@ -17,24 +20,25 @@
   </div>
 </div>
 <div class="topbar-wrap">
+  <div class="spacer"></div>
   <div class="topbar">
     <div class="wrapper cols-12">
       <div class="col col-3">
-        <div class="col-inner"><a href="">Manifesto</a></div>
+        <div class="col-inner"><a href="#manifest">Manifesto</a></div>
       </div>
       <div class="col col-3">
-        <div class="col-inner"><a href="">Curo Cinta Blanca</a></div>
+        <div class="col-inner"><a href="#course">Curso Cinta Blanca</a></div>
       </div>
       <div class="col col-3">
-        <div class="col-inner"><a href="">Tus Senseis</a></div>
+        <div class="col-inner"><a href="#senseis">Tus Senseis</a></div>
       </div>
       <div class="col col-3">
-        <div class="col-inner"><a href="">Aplica Hoy</a></div>
+        <div class="col-inner"><%= link_to "Aplica Hoy", new_application_path %></a></div>
       </div>
     </div>
   </div>
 </div>
-<div class="section manifest wow fadeIn">
+<div class="section manifest wow fadeIn" id="manifest">
   <div class="wrapper">
     <div class="cols-12">
       <div class="col col-12">
@@ -50,35 +54,34 @@
       <div class="col col-4">
         <div class="col-inner">
           <h3>Crear</h3>
-          <p>La habilidad de crear algo donde antes no había nada es el talento más valioso del siglo XXI. En el dev.f vivirás un entrenamiento intenso al lado de senseis y mentores expertos en tecnología, aprenderás a convertirte en un creador.</p>
+          <p>La habilidad de crear algo donde antes no había nada es el talento más valioso del siglo XXI. En el dev.f vivirás un entrenamiento intenso al lado de senseis y mentores expertos en tecnología. Aprenderás y te convertirás en un creador.</p>
         </div>
       </div>
       <div class="col col-4">
         <div class="col-inner">
           <h3>Colaborar</h3>
-          <p>Un verdadero guerrero nunca se queda solo. 
+          <p>Un verdadero guerrero reconoce el valor de un equipo. 
           Es tu oportunidad de convivir hombro a hombro y de aprender con personas de diferentes perfiles y talentos a construir soluciones tangibles a proyectos reales. El núcleo de nuestra filosofía es aprender a construir construyendo.</p>
         </div>
       </div>
       <div class="col col-4">
         <div class="col-inner">
           <h3>Avanzar</h3>
-          <p>La tecnología cambia constantemente, por eso no basta con aprender a escribir código. Lo que realmente importa es que desarrolles las habilidades y seguridad requeridas para 
-          completar tus proyectos, vencer obstáculos y explotar al máximo tu potencial</p>
+          <p>La tecnología cambia constantemente, por eso no basta con aprender a escribir código. Lo que realmente importa es que desarrolles las habilidades y seguridad requeridas para completar tus proyectos, vencer obstáculos y aprovechar al máximo tu potencial</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 <div class="image-separator data-image img-s-1"></div>
-<div class="section program wow fadeIn">
+<div class="section program wow fadeIn" id="course">
   <div class="wrapper">
     <div class="cols-12">
       <div class="col col-12">
         <div class="col-inner">
           <div class="section-title">
             <h2>Curso Cinta Blanca</h2>
-            <h5>Fundamentos de desarrollo de software para principiantes</h5>
+            <h5>Aprende a construir con software</h5>
           </div>
         </div>
       </div>
@@ -87,19 +90,19 @@
       <div class="col col-4 program-item">
         <div class="col-inner">
           <h3>Cultura Open Source.</h3>
-          <p>Colabora en línea con comunidades open source a través de Github y aprende a manejar tu código con Git.</p>
+          <p>Colabora en línea con comunidades Open Source a través de Github y aprende a controlar tu código y versiones con Git.</p>
         </div>
       </div>
       <div class="col col-4 program-item">
         <div class="col-inner">
           <h3>Web</h3>
-          <p>Aprende cómo funciona internet, entendendo el núcleo de toda página web: HTML, CSS, Javascript.</p>
+          <p>Aprende cómo funciona el Internet al descubrir los tres pilares principales de todo sitio web: HTML, CSS y Javascript.</p>
         </div>
       </div>
       <div class="col col-4 program-item">
         <div class="col-inner">
           <h3>Aplicaciones web modernas</h3>
-          <p>Construye la cara de los sitios web con tecnologías de punta como AngularJS, Jquery, o cualquier otro framework moderno que te apetezca.</p>
+          <p>Explora el arte de construir sitios web dinámicos y poderosos con tecnologías de punta como AngularJS, JQuery, o con cualquier otro framework moderno que te guste.</p>
         </div>
       </div>
     </div>    
@@ -107,33 +110,33 @@
       <div class="col col-4 program-item">
         <div class="col-inner">
           <h3>Aplicaciones Móviles</h3>
-          <p>Desarrolla aplicaciones móviles para los sistemas operativos más influyentes.</p>
+          <p>Desarrolla aplicaciones móviles para los sistemas operativos más utilizados.</p>
         </div>
       </div>
       <div class="col col-4 program-item">
         <div class="col-inner">
           <h3>Enfoque de Entregar</h3>
-          <p>Buenos hábitos para hacerte un desarrollador productivo.</p>
+          <p>Entrénate en los mejores hábitos y prácticas para que puedas volverte un desarrollador samurai productivo.</p>
         </div>
       </div>
       <div class="col col-4 program-item">
         <div class="col-inner">
           <h3>Publica tu Proyecto</h3>
-          <p>Crea y despliegua el corazón de tu aplicación web o móvil en la nube utilizando tecnologías que te den máxima agilidad como Rails, Parse, Firebase o NodeJS.</p>
+          <p>Demuestra tu nivel de conocimiento: presenta tus aplicaciones en la nube utilizando tecnologías de máxima agilidad como Rails, Parse, Firebase, NodeJS, entre otras.</p>
         </div>
       </div>
     </div>    
   </div>
 </div>
 <div class="image-separator img-s-2"></div>
-<div class="section facilitators wow fadeIn">
+<div class="section facilitators wow fadeIn" id="senseis">
   <div class="wrapper">
     <div class="cols-12">
       <div class="col col-12">
         <div class="col-inner">
           <div class="section-title">
             <h2>Conoce a tus senseis</h2>
-            <h5>Desarrolla tus chakras hacker</h5>
+            <h5>Deja que tus chakras hackers se empapen de sabiduría</h5>
           </div>
         </div>
       </div>
@@ -164,8 +167,8 @@
   </div>
 </div>   
 <div class="image-separator img-s-3"></div>
-<div class="section signup">
-  <div class="wrapper wow pulse" data-wow-delay=".8s">
+<div class="section signup" id="apply">
+  <div class="wrapper wow pulse" data-wow-delay=".3s">
     <div class="cols-12">
       <div class="col col-4 details">
         <div class="col-inner">
@@ -176,10 +179,10 @@
       </div>
       <div class="col col-4 the-deal">
         <div class="col-inner">
-          <h2>Inscríbete</h2>
+          <h2>Inscríbete Hoy</h2>
           <span class="old-price">$29,999 MXN</span>
           <h3 class="introduction-price">$14,999 MXN <span>Precio Introducción</span></h3>
-          <%= link_to "Aplica hoy a DevF".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
+          <%= link_to "Aplica hoy a dev.f".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
         </div>
       </div>
       <div class="col col-4 details">
@@ -190,37 +193,5 @@
         </div>
       </div>
     </div>  
-  </div>
-</div>    
-<div class="footer">
-  <div class="footer-top">
-    <div class="wrapper">
-      <div class="cols-12">
-        <div class="col col-6">
-          <div class="col-inner">
-            <h5>Contactanos</h5>
-            <p>Estamos encantados de responder cualquier pregunta que usted pueda tener acerca de Dev.f.</p> <br>
-            <a href="mailto:hola@devf.mx">hola@devf.mx</a>
-          </div>
-        </div>
-        <div class="col col-6 devf-brand-footer">
-          <div class="col-inner">
-            <%= link_to root_path, class: 'devf-logo-footer' do %>
-              <i class='devf-logo-gray'></i>
-              <span class="tagline"><%= Settings.tagline %></span>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="wrapper">
-      <div class="cols-12">
-        <div class="col col-12 col-inner sponsors">
-          <%= image_tag 'g-devs.png' %>
-        </div>
-      </div>
-    </div>
   </div>
 </div>

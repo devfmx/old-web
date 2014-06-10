@@ -1,4 +1,12 @@
 
+body {
+  padding-top: 114px;
+}
+
+p + p {
+  margin-top: 25px;
+}
+
 .wrapper {
   width: 1100px;
   margin: 0 auto;
@@ -13,12 +21,8 @@
   }
 }
 
-p + p {
-  margin-top: 25px;
-}
-
 .main-header {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;

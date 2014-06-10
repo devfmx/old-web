@@ -1,3 +1,6 @@
+.home {
+  padding-top: 0;
+}
 
 .home-intro {
   padding: 150px 0;
@@ -55,9 +58,50 @@
 
 .topbar-wrap {
   .topbar {
+    z-index: 5;
+
     a {
-      padding: 10px;
+      padding: 15px 10px;
       display: block;
     }
-  } 
+
+    &.active {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .spacer {
+    width: 100%;
+    display: none;
+  }
+
+  &.active {
+    .spacer {
+      display: block;
+    }
+  }
+
+  @include max-screen(630px) {
+    display: none;
+  }
+}
+
+// Questions
+.apply-form {
+  margin: 40px 0;
+}
+
+.questions {
+  margin-top: 40px;
+
+  .question {
+    margin-bottom: 30px;
+
+    .question-title {
+      margin-bottom: 10px;
+    }
+  }
 }

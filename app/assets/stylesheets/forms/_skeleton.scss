@@ -1,0 +1,23 @@
+#{$all-text-inputs}, textarea {
+  background-color: $white;
+  border: 1px solid #ccc;
+  border-radius: $radius;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,.02);
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+  outline: none;
+  @include transition (all .05s ease);
+  @include placeholder {
+    color: #999;
+  }
+}
+
+#{$all-text-inputs-focus}, textarea:focus {
+  border-color: $primary-color;
+  background-color: tint($primary-color, 97%)
+}
+
+textarea {
+  resize: none;
+}

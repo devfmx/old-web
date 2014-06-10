@@ -5,6 +5,8 @@
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
+  border: 0;
+  outline: none;
   @include text-size-regular;
 
   &.btn-large {

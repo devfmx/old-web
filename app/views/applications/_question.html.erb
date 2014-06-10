@@ -1,35 +1,33 @@
- <div class="cols-12">
-   <div class="col col-12">
-     <div class="col-inner">
-        <h5><%= question.question %></h5>
-        <%-
+<%-
+  name  = question.question
+  id    = question.id || name.to_url
+  value = @answers.send(id)
+  type  = question.type
 
-        name  = question.question
-        id    = question.id || name.to_url
-        value = @answers.send(id)
-        type  = question.type
+  case type
+  when 'name'
+   value = current_user.name if value.blank?
+   type = 'text_field'
+  when 'email'
+   value = current_user.email if value.blank?
+   type = 'email'
+  end
+%>
 
-        case type
-        when 'name'
-         value = current_user.name if value.blank?
-         type = 'text_field'
-        when 'email'
-         value = current_user.email if value.blank?
-         type = 'text_field'
-        end
-
-        %>
-
-
-        <% case type %>
-        <% when 'text_field' %>
-        <%= f.text_field id, :value => value %>
-        <% when 'text_area' %>
-        <%= f.text_area id, :rows => 5, :cols => 60, :value => value %>
-        <% when 'select' %>
-        <%= f.select id, options_from_collection_for_select(question.choices, :to_s, :to_s, value) %>
-        <% end %>
-     </div>
-   </div>
- </div>
-
+<div class="question">
+  <div class="question-title">
+    <%= f.label id, "#{question.question} <span class='rqrd'>*</span>:".html_safe %>
+  </div>
+  <div class="question-body">
+    <% case type %>
+    <% when 'text_field' %>
+    <%= f.text_field id, :value => value, :required => 'required' %>
+    <% when 'email' %>
+    <%= f.email_field id, :value => value, :required => 'required' %>
+    <% when 'text_area' %>
+    <%= f.text_area id, :rows => 5, :cols => 60, :value => value, :required => 'required' %>
+    <% when 'select' %>
+    <%= f.select id, options_from_collection_for_select(question.choices, :to_s, :to_s, value), :required => 'required' %>
+    <% end %>
+  </div>
+</div>

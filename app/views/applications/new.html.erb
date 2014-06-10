@@ -1,34 +1,34 @@
-<div class="home-intro hero-intro">
+<div class="apply-form">
   <div class="wrapper">
-    <div class="cols-12">
-      <div class="col col-7">
-        <div class="col-inner">
-          <div class="headline">
-            <h1>Inscríbete</h1>
-            <p>
-              Cuentanos un poco sobre ti
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section-home">
-  <div class="wrapper">
-  <%= form_for @application do |f| %>
-    <%= fields_for :answers do |f| %>
-      <%= render :partial => 'question', :collection => @questions, :locals => {:f => f, } %>
-    <% end %>
-
     <div class="cols-12">
       <div class="col col-12">
         <div class="col-inner">
-         <%= f.submit "Enviar", :class => 'btn btn-primary btn-large' %>
+          <h1>Inscríbete</h1>
+          <h3>Cuentanos un poco sobre ti</h3>
         </div>
       </div>
     </div>
     
-  <% end %>
+    <%= form_for @application do |f| %>
+      <div class="cols-12 questions">
+        <div class="col col-9">
+          <div class="col-inner">
+            <%= fields_for :answers do |f| %>
+              <%= render :partial => 'question', :collection => @questions, :locals => {:f => f, } %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="cols-12">
+        <div class="col col-12">
+          <div class="col-inner">
+            <%= f.button 'Enviar', :class => 'btn btn-primary btn-large' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
+<script>
+  $('.new_application').validate();
+</script>

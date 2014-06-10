@@ -4,39 +4,22 @@
 <% content_for :subtitle do %>
   Hemos recibido tu postulación al programa <%= @batch.name %>
 <% end %>
-
 <p>Revisaremos tu postulación lo más pronto posible, te pedimos un poco de paciencia.</p>
 <p>Mientras tanto, puedes revisar los siguientes enlaces:</p>
-
-<br/>
-<ul>
- <% Settings.interesting_links.each_pair do |name, url| %>
-  <li><%= link_to name, url %></li>
- <% end %>
-</ul>
-<br/>
-
+<% Settings.interesting_links.each_pair do |name, url| %>
+<p><%= link_to name, url %></p>
+<% end %>
 <p>Pero sobre todo: comienza a aprender y a crear por ti mismo.</p>
 <p>Recuerda que una de las cosas que más nos interesa es la iniciativa y ganas de construir que tienes.</p>
-
-<p>Sorprendenos, y cuentanos que cosas increibles aprendiste o hiciste mientras
- nos poniamos en contacto contigo.</p>
-
-<p>
- O invita a participar a tus amigos, el mundo es mucho mejor cuando lo compartes
- con personas que se divierten haciendo lo que tú haces.
-</p>
-
-<p>
- Puedes compartir el siguiente enlace con tus amigos: <br />
+<p>Sorprendenos, y cuentanos que cosas increibles aprendiste o hiciste mientras nos poniamos en contacto contigo.</p>
+<p> O invita a participar a tus amigos, el mundo es mucho mejor cuando lo compartes con personas que se divierten haciendo lo que tú haces.</p>
+<p>Puedes compartir el siguiente enlace con tus amigos:
  <%= link_to root_url, root_url %>
 </p>
-
-<p>
- O utilizar alguna de tus redes sociales: <br />
+<p> O utilizar alguna de tus redes sociales: <br />
  <% social_share_urls('Acabo de anotarme para entrar al programa de Devf', root_url, :facebook, :twitter) do |name, url| %>
    <%= link_to name, url %>
  <% end %>
 </p>
-
+<br>
 <p>¡Pronto nos pondremos en contacto contigo!</p>
