@@ -12,7 +12,7 @@ class Application < ActiveRecord::Base
   def answers=(answers)
     answers = OpenStruct.new(answers) if answers.kind_of?(Hash)
     @answers = answers
-    self.application_answers = YAML.dump(answers.as_json)
+    self.application_answers = YAML.dump(answers.instance_variable_get(:@table))
   end
 
   def answers_has_email
