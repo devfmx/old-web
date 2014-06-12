@@ -8,5 +8,5 @@ namespace 'git' do
     end
   end
 
-  task 'check' => 'start_ssh_agent'
+  #task 'check' => 'start_ssh_agent'
 end

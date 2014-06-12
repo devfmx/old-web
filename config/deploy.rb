@@ -1,5 +1,5 @@
 set :application, "devf"
-set :repo_url, "http://github.com/vic/devf.git"
+set :repo_url, "https://github.com/vic/devf.git"
 
 ask :branch, proc { 
   current = `git rev-parse --abbrev-ref HEAD`.chomp 
