@@ -122,6 +122,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (5.3.4)
@@ -264,6 +266,7 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.0)
   jquery-rails
+  meta-tags
   mysql2
   non-stupid-digest-assets
   omniauth-facebook

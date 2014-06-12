@@ -131,3 +131,24 @@
     }
   }
 }
+
+
+.thanks-message {
+  text-align: center;
+
+  .share-box {
+    width: 170px;
+    position: relative;
+    margin: 25px auto 0 auto;
+
+    .twitter-share {
+      position: absolute;
+      left: 0;
+    }
+
+    .fb-share {
+      position: absolute;
+      right: 0;
+    } 
+  }
+} 
