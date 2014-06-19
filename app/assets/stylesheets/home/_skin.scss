@@ -82,6 +82,10 @@
   }
 }
 
+.manifest .col-inner {
+  text-align: center;
+}
+
 .places {
   text-align: center;
 }
@@ -112,12 +116,7 @@
     }
 
     .introduction-price {
-      font-size: 30px;
-
-      span {
-        display: block;
-        @include text-size-regular;
-      }
+      font-size: 16px;
     }
   }
 }

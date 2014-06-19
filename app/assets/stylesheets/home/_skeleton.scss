@@ -26,9 +26,21 @@
   min-height: 500px;
 }
 
+.manifest .col-inner img {
+  margin-bottom: 25px;
+}
+
 .program {
   .program-item {
     margin-bottom: 40px;
+    position: relative;
+    padding-left: 40px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 }
 
