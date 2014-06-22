@@ -28,6 +28,7 @@ class Identity < ActiveRecord::Base
       end
       identity = Identity.find_by_uid(uid) || Identity.new(auth_attr)
       identity.attributes = auth_attr
+      identity
     end
   end
 
