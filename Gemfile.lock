@@ -44,6 +44,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.2.6)
+      activerecord (>= 3, < 5)
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
@@ -93,6 +95,9 @@ GEM
       activerecord (>= 3.0.0)
     formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
+    gon (5.0.4)
+      actionpack (>= 2.3.0)
+      json
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -255,6 +260,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  acts-as-taggable-on
   bourbon
   capistrano-rails
   capistrano-rvm
@@ -263,6 +269,7 @@ DEPENDENCIES
   devise
   exception_notification
   foreigner
+  gon
   httparty
   jbuilder (~> 2.0)
   jquery-rails

@@ -53,3 +53,5 @@ gem "non-stupid-digest-assets"
 gem 'exception_notification'
 gem 'slack-notifier'
 gem 'meta-tags'
+gem 'acts-as-taggable-on'
+gem 'gon'
