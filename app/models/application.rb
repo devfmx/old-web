@@ -5,6 +5,8 @@ class Application < ActiveRecord::Base
 
   validate :answers_has_email
 
+  acts_as_taggable
+
   def answers
     @answers ||= OpenStruct.new YAML.load(application_answers || '--- {}')
   end

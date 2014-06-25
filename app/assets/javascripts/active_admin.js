@@ -3,5 +3,7 @@
 #= require ace/ace.js
 #= require ace/mode-yaml.js
 #= require ace/theme-github.js
+#= require select2/select2.js
 #= require admin/rating
 #= require admin/questions
+#= require admin/tags

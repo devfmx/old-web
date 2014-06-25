@@ -2,17 +2,24 @@
   Hola <%= @user.name %>
 <% end %>
 <% content_for :subtitle do %>
-  Hemos recibido tu postulación al programa <%= @batch.name %>
+  Gracias por aplicar al Dev.F
 <% end %>
-<p>Revisaremos tu postulación lo más pronto posible, te pedimos un poco de paciencia.</p>
+<p>
+Nos emociona mucho que quieras tomar el Curso Cinta Blanca.<br />
+Estamos recibiendo muchas aplicaciones, entonces nos tomará algunos días ponernos en contacto contigo.<br />
+De lo que puedes estar seguro/a, es que tu aplicación será revisada por alguien de nuestro Core Team y entonces nos pondremos en contacto contigo.
+</p>
+<p>
+¡Te agradecemos tu paciencia! Equipo Dev.F
+</p>
 <p>Mientras tanto, puedes revisar los siguientes enlaces:</p>
 <% Settings.interesting_links.each_pair do |name, url| %>
 <p><%= link_to name, url %></p>
 <% end %>
 <p>Pero sobre todo: comienza a aprender y a crear por ti mismo.</p>
 <p>Recuerda que una de las cosas que más nos interesa es la iniciativa y ganas de construir que tienes.</p>
-<p>Sorprendenos, y cuentanos que cosas increibles aprendiste o hiciste mientras nos poniamos en contacto contigo.</p>
-<p> O invita a participar a tus amigos, el mundo es mucho mejor cuando lo compartes con personas que se divierten haciendo lo que tú haces.</p>
+<p>Sorprendenos, nada nos emociona más que personas que no se quedan quietas, comienza ahora con algo interesante y cuentanos que cosas increibles aprendiste o hiciste mientras nos poniamos en contacto contigo.</p>
+<p>O invita a participar a tus amigos, el mundo es mucho mejor cuando lo compartes con personas que se divierten haciendo lo que tú haces.</p>
 <p>Puedes compartir el siguiente enlace con tus amigos:
  <%= link_to root_url, root_url %>
 </p>

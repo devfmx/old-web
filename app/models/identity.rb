@@ -22,10 +22,13 @@ class Identity < ActiveRecord::Base
       when :twitter
         auth_attr[:url] = access_token['info']['urls']['Twitter'] 
       when :github
+        auth_attr[:name] ||= (access_token['extra']['raw_info']['name'] rescue nil).to_s
       else
         raise "Provider #{provider} not handled"
       end
-      Identity.find_by_uid(uid) || Identity.new(auth_attr)
+      identity = Identity.find_by_uid(uid) || Identity.new(auth_attr)
+      identity.attributes = auth_attr
+      identity
     end
   end
 
