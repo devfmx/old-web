@@ -10,7 +10,9 @@ ActiveAdmin.register Application do
 
   index do
     selectable_column
-    column :user
+    column :user do |app|
+      link_to app.user.name, admin_batch_application_path(app.batch, app)
+    end
     column :tags do |app|
       app.tag_list.map do |tag|
         link_to(tag, url_for(:q => {:taggings_tag_name_in => [tag]}))
