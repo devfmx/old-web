@@ -1,11 +1,12 @@
 <% content_for :title do %> 
   ¡Hola <%= @user.name %>! 
 <% end %>
-<p>
+
+<% content_for :subtitle do %>
 Hace algunos días tuvimos una entrevista contigo para conocerte mejor y explorar si tu perfil es el indicado para entrar al primer curso Cinta Blanca de Dev.F. Tenemos el veredicto para tí:
 
 ¡FELICIDADES, HAS SIDO ACEPTAD@ AL PROGRAMA!
-</p>
+<% end %>
 
 <p>
 Nos emociona mucho que vayas a formar parte de este primer curso. Esperamos que tú también vengas con todas las ganas de aprender a construir y de convertirte en un/una gran hacker.
@@ -43,6 +44,6 @@ Algunos puntos importantes que debes tomar en cuenta para este curso:
 </p>
 
 <p>
-Abrazos, </br>
+Abrazos, <br>
 El Equipo Dev.F.
 </p>
