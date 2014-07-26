@@ -1,7 +1,7 @@
 class CreateBasicModels < ActiveRecord::Migration
   def change
 
-    add_column :users, :name, :string, null: false    
+    add_column :users, :name, :string, null: false, default: ""
 
     create_table :identities do |t|
       t.string     :provider, null: false
@@ -15,7 +15,7 @@ class CreateBasicModels < ActiveRecord::Migration
       t.belongs_to :user
       t.timestamps
     end
-    add_foreign_key :identities, :users    
+    add_foreign_key :identities, :users
 
     create_table :batches do |t|
       t.string     :name, null: false
