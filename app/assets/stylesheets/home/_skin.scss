@@ -37,7 +37,7 @@
 
 .home-intro {
   background-attachment: fixed;
-  background-image: url('home/hero-intro-angel.jpg');
+  background-image: url('home/hero-intro.jpg');
   @extend .cover-photo;
 
   .headline {
@@ -64,15 +64,19 @@
   @extend .cover-photo;
 
   &.img-s-1 {
-    background-image: url('home/image-s-1.jpg');
+    background-image: url('home/separator-1.jpg');
   }
 
   &.img-s-2 {
-    background-image: url('home/image-s-2.jpg');
+    background-image: url('home/separator-2.jpg');
   }
 
   &.img-s-3 {
-    background-image: url('home/image-s-3.jpg'); 
+    background-image: url('home/separator-3.jpg'); 
+  }
+
+  &.img-s-4 {
+    background-image: url('home/separator-4.jpg'); 
   }
 }
 
@@ -141,7 +145,7 @@
     .col:first-child .col-inner {
       border-left: 1px solid #f2f2f2;
     }
-
+    
     a {
       text-align: center;
       text-transform: uppercase;

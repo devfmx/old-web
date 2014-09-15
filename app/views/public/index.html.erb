@@ -18,12 +18,12 @@ home
       <div class="col col-7">
         <div class="col-inner">
           <div class="headline">
-            <h1>Hackea tu verano, desarrolla el futuro.</h1>
-            <p>Dev.f es la escuela para crear y desarrollar soluciones a problemas del mundo real, utilizando las herramientas de software del momento.</p>
-            <p>Estamos en la ciudad y el tiempo indicados.</p>
+            <h1>Sé parte de la primer escuela de hackers en América Latina</h1>
+            <p>El Dev.F es el lugar donde se aprende haciendo, por eso le llamamos des-escuela. En este espacio podrás satisfacer tu curiosidad intelectual construyendo software desde el día uno junto con tus Senseis y los mejores mentores de la ciudad.</p>
+            <br>
             <p>Nuestro secreto: Más que desarrollar tecnología, desarrollamos personas.</p>
             <br>
-            <%= link_to "¡Obtén una beca ahora!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
+            <%= link_to "¡Aplica hoy!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
           </div>
         </div>
       </div>
@@ -38,10 +38,10 @@ home
         <div class="col-inner"><a href="#manifest">Manifesto</a></div>
       </div>
       <div class="col col-3">
-        <div class="col-inner"><a href="#course">Curso Cinta Blanca</a></div>
+        <div class="col-inner"><a href="#course">Programas</a></div>
       </div>
       <div class="col col-3">
-        <div class="col-inner"><a href="#senseis">Tus Senseis</a></div>
+        <div class="col-inner"><a href="#senseis">Tus Guias</a></div>
       </div>
       <div class="col col-3">
         <div class="col-inner"><%= link_to "Aplica Hoy", new_application_path %></a></div>
@@ -49,6 +49,36 @@ home
     </div>
   </div>
 </div>
+
+<div class="section manifest wow fadeIn" id="hacker">
+  <div class="wrapper">
+    <div class="cols-12">
+      <div class="col col-12">
+        <div class="col-inner">
+        </div>
+      </div>
+    </div>
+    <div class="cols-12">
+      <div class="col col-4">
+        
+          <h1>hack·er</h1>
+          <p>/hækə(ɹ)/</p>
+          <br>
+          <br>
+          <p>sust.</p>
+          <br>
+          <p>1. Una persona que disfruta explorar los límites de lo posible por curiosidad intelectual.</p>
+          <br>
+          <p>2. Una persona que se regocija al entender profundamente los elementos internos de un sistema, en particular computadoras y redes de ellas.</p>
+          <br>
+          <p>3. Un individuo que disfruta el reto intelectual de cretivamente resolver problemas complejos y eludir las limitaciones de los sistemas de información y extender sus capacidades.</p>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="image-separator data-image img-s-1"></div>
 <div class="section manifest wow fadeIn" id="manifest">
   <div class="wrapper">
     <div class="cols-12">
@@ -66,36 +96,37 @@ home
         <div class="col-inner">
           <%= image_tag("home/manifesto-create.png") %>
           <h3>Crear</h3>
-          <p>La habilidad de crear algo donde antes no había nada es el talento más valioso del siglo XXI. En el Dev.F vivirás un entrenamiento intenso al lado de senseis y mentores expertos en tecnología. Aprenderás y te convertirás en un creador.</p>
+          <p>“Programming is the closest thing we have to a superpower.” Crear algo donde antes no había nada es el talento por excelencia. Aprende junto a senseis y mentores expertos a construir aplicaciones de software útiles desde cero. En el Dev.F. inevitablemente te convertirás en un creador.</p>
         </div>
       </div>
       <div class="col col-4">
         <div class="col-inner">
           <%= image_tag("home/manifesto-collaborate.png") %>
           <h3>Colaborar</h3>
-          <p>Un verdadero iluminad@ reconoce el valor de un equipo. 
-          Es tu oportunidad de convivir hombro a hombro y de aprender con personas de diferentes perfiles y talentos a construir soluciones tangibles a proyectos reales. El núcleo de nuestra filosofía es aprender a construir construyendo.</p>
+          <p>“Detrás de una gran comunidad siempre encontraremos una gran cultura de colaboración." En el Dev.F. creemos que formar equipos multidisciplinarios y trabajar con personas de diferentes perfiles profesionales es uno de los pilares de la cultura hacker. Los grandes centros tecnológicos del mundo se han desarrollado gracias a esta mentalidad: antes de pensar en recibir, es importante tener la disposición de dar.</p>
         </div>
       </div>
       <div class="col col-4">
         <div class="col-inner">
           <%= image_tag("home/manifesto-progress.png") %>
           <h3>Avanzar</h3>
-          <p>La tecnología cambia constantemente, por eso no basta con aprender a escribir código. Lo que realmente importa es que desarrolles las habilidades y seguridad requeridas para completar tus proyectos, vencer obstáculos y aprovechar al máximo tu potencial</p>
+          <p> "La tecnología es una herramienta que está cambiando y evolucionando constantemente. Por eso, lo más importante no es dominar un lenguaje de programación, sino saber identificar las herramientas indicadas para resolver un problema de la manera más eficiente posible. Las habilidades más importantes que te vas a llevar del Dev.F. son: completar tus proyectos, vencer obstáculos con creatividad y aprovechar al máximo tu potencial intelectual.”</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="image-separator data-image img-s-1"></div>
+
+
+<div class="image-separator data-image img-s-2"></div>
 <div class="section program wow fadeIn" id="course">
   <div class="wrapper">
     <div class="cols-12">
       <div class="col col-12">
         <div class="col-inner">
           <div class="section-title">
-            <h2>Curso Cinta Blanca</h2>
-            <h5>Aprende a construir con software</h5>
+            <h2>Programas</h2>
+            <h5>El sendero hacia la cultura hacker</h5>
           </div>
         </div>
       </div>
@@ -104,59 +135,52 @@ home
       <div class="col col-4 program-item">
         <div class="col-inner">
           <%= image_tag("home/octocat.png") %>
-          <h3>Cultura Open Source.</h3>
-          <p>Colabora en línea con comunidades Open Source a través de Github y aprende a controlar tu código y versiones con Git.</p>
+          <h3>Cinta Blanca</h3>
+          <h5>Aprende el ABC de la tecnología.</h5>
+          <p>1. Si quieres iniciarte en la nueva ola tecnológica, aplica a este curso.</p>
+          <p>2. Programa de dos meses con horarios amigables para estudiantes de 15 a 100 años y profesionales que trabajan en horarios de oficina.</p>
+          <p>3. Te llevas skills técnicos básicos y la experiencia de sumergirte en la cultura hacker.</p>
+          <%= link_to "¡Aplica ya!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
         </div>
       </div>
+
       <div class="col col-4 program-item">
         <div class="col-inner">
           <%= image_tag("home/laptop.png") %>
-          <h3>Web</h3>
-          <p>Aprende cómo funciona el Internet al descubrir los tres pilares principales de todo sitio web: HTML, CSS y Javascript.</p>
+          <h3>Cinta Roja</h3>
+          <h5>Construye un proyecto real con tecnología.</h5>
+          <p>1. Éntrale de lleno al mundo de desarrollo de software y negocios tecnológicos.</p>
+          <p>2. Programa intensivo de seis semanas, el tiempo perfecto para construir la app que va a solucionar un problema real.</p>
+          <p>3. Te llevas los skills para moverte como quieras en el ecosistema tecnológico y emprendedor.</p>
+          <%= link_to "¡Aplica ya!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
         </div>
       </div>
+
       <div class="col col-4 program-item">
         <div class="col-inner">
           <%= image_tag("home/code.png") %>
-          <h3>Aplicaciones web modernas</h3>
-          <p>Explora el arte de construir sitios web dinámicos y poderosos con tecnologías de punta como AngularJS, JQuery, o con cualquier otro framework moderno que te guste.</p>
-        </div>
-      </div>
-    </div>    
-    <div class="cols-12">
-      <div class="col col-4 program-item">
-        <div class="col-inner">
-          <%= image_tag("home/mobile-apps.png") %>
-          <h3>Aplicaciones Móviles</h3>
-          <p>Desarrolla aplicaciones móviles para los sistemas operativos más utilizados.</p>
-        </div>
-      </div>
-      <div class="col col-4 program-item">
-        <div class="col-inner">
-          <%= image_tag("home/zen-coding.png") %>
-          <h3>Enfoque de Entregar</h3>
-          <p>Entrénate en los mejores hábitos y prácticas para que puedas volverte un desarrollador samurai productivo.</p>
-        </div>
-      </div>
-      <div class="col col-4 program-item">
-        <div class="col-inner">
-          <%= image_tag("home/deploy.png") %>
-          <h3>Publica tu Proyecto</h3>
-          <p>Demuestra tu nivel de conocimiento: presenta tus aplicaciones en la nube utilizando tecnologías de máxima agilidad como Rails, Parse, Firebase, NodeJS, entre otras.</p>
+          <h3>Cinta Negra</h3>
+          <h5>Directo a las grandes ligas de la tecnología.</h5>
+          <p>1. Por si quieres convertirte en desarrollador profesional de software.</p>
+          <p>2. 3 meses intensivos que te harán capaz de competir con cualquiera.</p>
+          <p>3. Te llevas los skills necesarios para alta empleabilidad y/o para trabajar por tu cuenta con excelencia.</p>
+          <%= link_to "¡Aplica ya!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
         </div>
       </div>
     </div>    
   </div>
 </div>
-<div class="image-separator img-s-2"></div>
+
+
+<div class="image-separator img-s-3"></div>
 <div class="section facilitators wow fadeIn" id="senseis">
   <div class="wrapper">
     <div class="cols-12">
       <div class="col col-12">
         <div class="col-inner">
           <div class="section-title">
-            <h2>Conoce a tus senseis</h2>
-            <h5>Deja que tus chakras hackers se empapen de sabiduría</h5>
+            <h2>Gurús del DevF</h2>
+            <h5>Líderes que están cambiando la cara de México desde la trinchera tecnológica; con ellos podrás acercarte en el Dev.F. para pulir juntos tus proyectos:</h5>
           </div>
         </div>
       </div>
@@ -186,7 +210,7 @@ home
     </div>    
   </div>
 </div>   
-<div class="image-separator img-s-3"></div>
+<div class="image-separator img-s-4"></div>
 <div class="section signup" id="apply">
   <div class="wrapper wow pulse" data-wow-delay=".3s">
     <div class="cols-12">
