@@ -55,9 +55,27 @@ var onLoaded = function() {
       barSticky();
     });
   };
+
+  $('#white-dan').click(function (event) {
+  document.getElementById('overlay').style.display = "block";
+  document.getElementById('modal').style.display = "block";
+  event.preventDefault(); // Prevent link from following its href
+});
+
+  $('#red-dan').click(function (event) {
+  event.preventDefault(); // Prevent link from following its href
+});
+
+  $('#black-dan').click(function (event) {
+  alert('Black!');
+  event.preventDefault(); // Prevent link from following its href
+
+});
 };
+
 
 $(function(){
   onLoaded();
   $(document).on('page:load', onLoaded);
 });
+
