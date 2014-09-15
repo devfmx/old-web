@@ -49,6 +49,9 @@ home
         <div class="col-inner"><%= link_to "Blog", "http://devfmx.github.io" %></a></div>
       </div>
       <div class="col col-2">
+        <div class="col-inner"><a href="#testimonials">Testimonios</a></div>
+      </div>
+      <div class="col col-2">
         <div class="col-inner"><%= link_to "Aplica Hoy", new_application_path %></a></div>
       </div>
     </div>
@@ -237,6 +240,57 @@ home
 
 <div class="image-separator img-s-4"></div>
 <div class="section signup" id="apply">
+
+<div class="section facilitators wow fadeIn" id="testimonials">
+  <div class="wrapper">
+    <div class="cols-12">
+      <div class="col col-12">
+        <div class="col-inner">
+          <div class="section-title">
+            <h2>Testimonios</h2>
+            <h5>Ellos formaron parte del primer batch de participantes y ahora son parte de nuestros casos de éxito.</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cols-12">
+      <div class="col col-4 facilitator-item">
+        <div class="col-inner">
+          <%= image_tag("home/petter.jpg")%>
+          <h3>Pedro Martínez</h3>
+          <p>A unos días de terminar el programa, Pedro hizo su primer aplicación profesional al ser parte del equipo que desarrolló la aplicación para Android de Semana del Emprendedor 2014.</p>
+          <br>
+          <h5>"Aquí viví el mejor verano de mi vida"</h5>
+        </div>
+      </div>
+      <div class="col col-4 facilitator-item">
+        <div class="col-inner">
+          <%=image_tag("home/gabs.jpeg")%>
+          <h3>Gabriela Serrato</h3>
+          <p>Unas semanas después de terminar el programa y después de varias ofertas de empleo, Gabs decidió trabajar en Kangou como UX designer.</p>
+          <br>
+          <br>
+          <h5>"Gracias al Dev.F decidí quedarme en México en vez de irme a vivir a otro país"</h5>
+        </div>
+      </div>
+      <div class="col col-4 facilitator-item">
+        <div class="col-inner">
+          <%=image_tag("home/rick.jpg")%>
+          <h3>Ricardo Martínez</h3>
+          <p>Durante DevF Rick construyó su propia startup. Actualmente están en búsqueda de obtener capital semilla y fueron invitados a participar en The Summit, en Dublín, Irlanda.</p>
+          <br>
+          <h5>"Dev.F es una de esas experiencias que cambian tu visión y hackean tu vida."</h5>
+        </div>
+      </div>
+    </div> 
+    <br>
+    <div class="section-title">
+        <h3>¿Quieres formar parte del Dev.F. pero no sabes si es un fit para tí? Lee este <%= link_to "post", "http://devfmx.github.io/info/2014/09/14/devf-busca-personas-como-tu/"%> y descubre qué tipo de personas estamos buscando para la primera escuela de hackers en México y LatAm.</h3>
+    </div>
+  </div>
+</div>   
+
+  <!--
   <div class="wrapper wow pulse" data-wow-delay=".3s">
     <div class="cols-12">
       <div class="col col-4 details details-top">
@@ -270,5 +324,5 @@ home
         </div>
       </div>
     </div>  
-  </div>
+  </div>-->
 </div>
