@@ -44,6 +44,18 @@ var onLoaded = function() {
     }
   };
 
+  $(".fancybox").fancybox({
+    maxWidth  : 800,
+    maxHeight : 600,
+    fitToView : false,
+    width   : '70%',
+    height    : '70%',
+    autoSize  : false,
+    closeClick  : false,
+    openEffect  : 'none',
+    closeEffect : 'none'
+  });
+
   if ( home.length ) {
     setHeroHeight();
 
@@ -57,14 +69,14 @@ var onLoaded = function() {
   };
 
   $('#white-dan').click(function (event) {
-  document.getElementById('overlay').style.display = "block";
-  document.getElementById('modal').style.display = "block";
-  event.preventDefault(); // Prevent link from following its href
-});
+    document.getElementById('overlay').style.display = "block";
+    document.getElementById('modal').style.display = "block";
+    event.preventDefault(); // Prevent link from following its href
+  });
 
   $('#red-dan').click(function (event) {
-  event.preventDefault(); // Prevent link from following its href
-});
+    event.preventDefault(); // Prevent link from following its href
+  });
 
   $('#black-dan').click(function (event) {
   alert('Black!');

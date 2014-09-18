@@ -173,40 +173,11 @@
   }
 }
 
-
-//Overlay
-.overlay {
-  display:none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-  background-color: rgba(0,0,0,0.5);
-}
-
 // just some content with arbitrary styles for explanation purposes
 .modal {
-    display:none;
-    width: 600px;
-    height: 400px;
-    line-height: 200px;
-    position: fixed;
-    top: 30%;
-    left: 38%;
-    margin-top: -100px;
-    margin-left: -150px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    text-align: center;
-    z-index: 11; /* 1px higher than the overlay layer */
+  display: none;
 }
 
 .content {
-    margin: 30px;
-}
-
-h1 {
-    font-family: 'Federo', sans-serif;
+  margin: 30px;
 }

@@ -125,20 +125,6 @@ home
   </div>
 </div>
 
-
-<div class="overlay" id="overlay" onclick="funcShow();"></div>
-
-<div id="modal" class="modal">
-  <div class="col col-4 the-deal">
-    <div class="col-inner">
-      <p>¡Inscríbete Hoy!</p>
-      <p>¡Inscríbete Hoy!</p>
-      <%= link_to "¡Obtén una beca ahora!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
-    </div>
-  </div>
-</div>
-
-
 <div class="image-separator data-image img-s-2"></div>
 <div class="section program wow fadeIn" id="course">
   <div class="wrapper">
@@ -162,7 +148,11 @@ home
           <p>2. Programa de dos meses con horarios amigables para estudiantes de 15 a 100 años y profesionales que trabajan en horarios de oficina.</p>
           <p>3. Te llevas skills técnicos básicos y la experiencia de sumergirte en la cultura hacker.</p>
           <br>
-          <%= link_to "Ver más".html_safe, '', :id => 'white-dan', class: 'btn btn-primary btn-large' %>
+          <%= link_to "Ver más".html_safe, '#white-course', class: 'btn btn-primary btn-large fancybox' %>
+          <div id="white-course" class="modal">
+            <h2>Cinta Blanca</h2>
+            <%= link_to "¡Obtén una beca ahora!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
+          </div>
         </div>
       </div>
 
@@ -176,7 +166,12 @@ home
           <p>3. Te llevas los skills para moverte como quieras en el ecosistema tecnológico y emprendedor.</p>
           <br>
           <br>
-          <%= link_to "Ver más".html_safe, '', :id => 'red-dan', class: 'btn btn-primary btn-large' %>
+          <%= link_to "Ver más".html_safe, '#red-course', class: 'btn btn-primary btn-large fancybox' %>
+
+          <div id="red-course" class="modal">
+            <h2>Cinta Roja</h2>
+            <%= link_to "¡Obtén una beca ahora!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
+          </div>
         </div>
       </div>
 
@@ -191,7 +186,12 @@ home
           <br>
           <br>
           <br>
-          <%= link_to "Ver más".html_safe, '', :id => 'black-dan', class: 'btn btn-primary btn-large' %>
+          <%= link_to "Ver más".html_safe, '#black-course', class: 'btn btn-primary btn-large fancybox' %>
+          
+          <div id="black-course" class="modal">
+            <h2>Cinta Negra</h2>
+            <%= link_to "¡Obtén una beca ahora!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
+          </div>
         </div>
       </div>
     </div>    
@@ -239,18 +239,17 @@ home
 </div>   
 
 <div class="image-separator img-s-4"></div>
-<div class="section signup" id="apply">
 
 <div class="section facilitators wow fadeIn" id="testimonials">
   <div class="wrapper">
-      <div class="col col-12">
-        <div class="col-inner">
-          <div class="section-title">
-            <h2>Testimonios</h2>
-            <h5>Ellos formaron parte del primer batch de participantes y ahora son parte de nuestros casos de éxito.</h5>
-          </div>
+    <div class="col col-12">
+      <div class="col-inner">
+        <div class="section-title">
+          <h2>Testimonios</h2>
+          <h5>Ellos formaron parte del primer batch de participantes y ahora son parte de nuestros casos de éxito.</h5>
         </div>
       </div>
+    </div>
     <div class="cols-12">
       <div class="col col-4 facilitator-item">
         <div class="col-inner">
@@ -281,13 +280,14 @@ home
         </div>
       </div>
     </div> 
-    <br>
+    <br><br><br><br>
     <div class="section-title">
-        <h3>¿Quieres formar parte del Dev.F. pero no sabes si es un fit para tí? Lee este <%= link_to "post", "http://devfmx.github.io/info/2014/09/14/devf-busca-personas-como-tu/"%> y descubre qué tipo de personas estamos buscando para la primera escuela de hackers en México y LatAm.</h3>
+      <h3>¿Quieres formar parte del Dev.F. pero no sabes si es un fit para tí? Lee este <%= link_to "post", "http://devfmx.github.io/info/2014/09/14/devf-busca-personas-como-tu/"%> y descubre qué tipo de personas estamos buscando para la primera escuela de hackers en México y LatAm.</h3>
     </div>
   </div>
-</div>   
+</div>
 
+<div class="section signup" id="apply" style="display: none;">
   <!--
   <div class="wrapper wow pulse" data-wow-delay=".3s">
     <div class="cols-12">

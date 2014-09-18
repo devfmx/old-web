@@ -7,20 +7,6 @@ p + p {
   margin-top: 25px;
 }
 
-.wrapper {
-  width: 1100px;
-  margin: 0 auto;
-  @include clearfix;
-
-  @include max-screen(1170px) {
-    width: 960px;
-  }
-
-  @include max-screen(960px) {
-    width: 85%;
-  }
-}
-
 .main-header {
   position: fixed;
   left: 0;
