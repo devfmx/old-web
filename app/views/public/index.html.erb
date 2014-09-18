@@ -148,9 +148,32 @@ home
           <p>2. Programa de dos meses con horarios amigables para estudiantes de 15 a 100 años y profesionales que trabajan en horarios de oficina.</p>
           <p>3. Te llevas skills técnicos básicos y la experiencia de sumergirte en la cultura hacker.</p>
           <br>
-          <%= link_to "Ver más".html_safe, '#white-course', class: 'btn btn-primary btn-large fancybox' %>
+          <%= link_to "Más información >>".html_safe, '#white-course', class: 'btn  btn-large fancybox' %>
           <div id="white-course" class="modal">
             <h2>Cinta Blanca</h2>
+            <h3>“Learning to code is the single best thing anyone can do to get the most out of the amazing future in front of us.” -Marc Andreesen.</h3>
+            <br>
+              <h4>Introducción al desarrollo web. (48 horas)</h4>
+                <ol>
+                  <li>Páginas web con HTML5</li>
+                  <li>Agregando funcionalidad con JS</li>
+                  <li>Estilos con CSS3</li>
+                  <li>Diseño responsivo.</li>
+                </ol>
+                <br>
+
+              <h4>Fundamentos de aplicaciones web. (48 horas)</h4>
+              <ol>
+                <li>Desarrollo de aplicaciones con Rails</li>
+                <li>Modelos de datos</li>
+                <li>Forms y componentes</li>
+                <li>ORM's</li>
+                <li>Rutas</li>
+                <li>Despliegue de aplicaciones</li>
+              </ol>
+            <br>
+            <h3>Precio: $ 9,999 MXN.</h3>
+            <h2>Fecha de inicio: 6 de Octubre de 2014.</h2>
             <%= link_to "¡Obtén una beca ahora!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
           </div>
         </div>
@@ -166,7 +189,7 @@ home
           <p>3. Te llevas los skills para moverte como quieras en el ecosistema tecnológico y emprendedor.</p>
           <br>
           <br>
-          <%= link_to "Ver más".html_safe, '#red-course', class: 'fancybox' %>
+          <%= link_to "Más información >>".html_safe, '#red-course', class: 'btn  btn-large fancybox' %>
 
           <div id="red-course" class="modal">
             <h2>Cinta Roja</h2>
@@ -189,7 +212,9 @@ home
               </ol>
                   <br>
             <h4>Semana 3 - 6 Implementación de desarrollo.</h4>
-            <h5>Desarrollo de tu producto con herramientas como: Polymer, Rails, NodeJS, Android, iOS, AngularJS, jQuery</h5>
+            <ol>
+              <li>Desarrollo de tu producto con herramientas como: Polymer, Rails, NodeJS, Android, iOS, AngularJS, ó jQuery.</li>
+            </ol>
             <br>
             <h2>Fecha de inicio: 6 de Octubre de 2014.</h2>
             <%= link_to "¡Obtén una beca ahora!".html_safe, new_application_path, class: 'btn btn-primary btn-large' %>
@@ -208,15 +233,16 @@ home
           <br>
           <br>
           <br>
-          <%= link_to "Ver más".html_safe, '#black-course', class: 'btn btn-primary btn-large fancybox' %>
+          <%= link_to "Más información >>".html_safe, '#black-course', class: 'btn btn-large fancybox' %>
           
           <div id="black-course" class="modal">
             <h2>Cinta Negra</h2>
+            <br>
             <h3>“Programming is the closest thing we have to a superpower.” -Drew Houston.</h3>
             <br>
             <br>
             <br>
-            <p>COMING SOON...</p>
+            <h1>Coming Soon (2015)</h1>
           </div>
         </div>
       </div>
@@ -225,14 +251,14 @@ home
 </div>
 
 
-<div class="image-separator img-s-3"></div>
+<div class="image-separator data-image img-s-3"></div>
 <div class="section facilitators wow fadeIn" id="senseis">
   <div class="wrapper">
     <div class="cols-12">
       <div class="col col-12">
         <div class="col-inner">
           <div class="section-title">
-            <h2>Gurús del DevF</h2>
+            <h2>Tus Guias</h2>
             <h5>Líderes que están cambiando la cara de México desde la trinchera tecnológica; con ellos podrás acercarte en el Dev.F. para pulir juntos tus proyectos:</h5>
           </div>
         </div>
@@ -241,30 +267,94 @@ home
     <div class="cols-12">
       <div class="col col-4 facilitator-item">
         <div class="col-inner">
-          <%= image_tag("home/vic.png")%>
-          <h3>Victor Borja.</h3>
-          <p>Victor es core commiter de Rubinius, Apache Buildr y co-autor de Fancy-lang. A lo largo de sus 14 años de experiencia en la industria ha trabajado como programador, líder técnico, consultor senior y ha creado dos startups de tecnología.</p>
+          <%= image_tag("home/jorge_molina.jpg")%>
+          <h3>Jorge Molina.</h3>
+          <h4>Director Regional, Google Enterprise.</h4>
+        </div>
+      </div>
+      <div class="col col-4 facilitator-item">
+        <div class="col-inner">
+          <%=image_tag("home/rodowi.png")%>
+          <h3>Rodolfo Wilhelmy</h3>
+          <h4>Chief Data Officer, Presidencia de la República</h4>
+        </div>
+      </div>
+      <div class="col col-4 facilitator-item">
+        <div class="col-inner">
+          <%=image_tag("home/alfonso_luna.jpg")%>
+          <h3>Alfonso Luna</h3>
+          <h4>Ex-Microsoft, Ex-Google, CEO de Kentriki</h4>
+        </div>
+      </div>
+    </div>    
+    <div class="section-title">
+      <%= link_to "Ver todos los mentores >>".html_safe, '#all-mentors', class: 'btn  btn-large fancybox' %>
+    </div>
+    <div id="all-mentors" class="modal">
+      <h2>Todos los mentores</h2>
+        <ol>
+          <li>Antonio Guzmán – Líder GDG's DF / Entrenador acreditado de Google</li>
+          <li>Francisco Solsona – Lead SP LatAm Developer Relations Google</li>
+          <li>Pethros Egziabher – Ex-Google / Harvard</li>
+          <li>Francisco Mekler – CTO IMCO</li>
+          <li>Rodolfo Wilhelmy – Chief Data Officer Presidencia de la República</li>
+          <li>Pedro Germán López – Advisor Miami Ad School, Co-fundador ForwardLab</li>
+          <li>Carlos Toxtli – Co-fundador ComproPago, Technical Program Manager en Google</li>
+          <li>Rosemary Martínez – Diseñadora y Emprendedora</li>
+          <li>Uriel Ramírez – Developer Advocate en Mejorando.la, GDG IPN</li>
+          <li>Alfonso Luna – Ex-Google, Ex-Microsoft, Co-fundador Kentriki</li>
+          <li>Volker Müller – CTO Descufy, Ex-Ramius Capital Group</li>
+          <li>Erick Camacho – Ex-Diverza, CTO Nubleer</li>
+          <li>Miguel Gutiérrez – CEO de Base Logístika</li>
+          <li>Daniel Zavala – Ex-Mejorando.la, Full-stack developer en Tutum Inc.,</li>
+          <li>Jeduan Cornejo – Ex-CTO Yogome, Co-fundador ChelaJS</li>
+          <li>José Luis Rodríguez – iOS developer enLastRoomMX, UNAM Mobile</li>
+          <li>Josué Gio – Co-fundador y CEO LastRoomMX</li>
+          <li>Pablo Casaubón – Co-fundador de PingStamp</li>
+          <li>Daniel Zamora – Líder técnico en PingStamp</li>
+          <li>Ela Stapley – Ex-The Guardian, The Engine Room, Co-fundadora Factual</li>
+          <li>Juan Pablo Escobar – Ex-Innku, Co-fundador Codeando México</li>
+          <li>Marcos Penhos – CEO y fundador PengoStores.</li>
+          <li>Aarón Grego – CEO y fundador QueremosComer.com y Punto 2012</li>
+          <li>José Sevilla – CEO y co-fundador Dinkbit</li>
+        </ol>
+    </div>
+
+    <br>
+    <br>
+    <div class="col-inner">
+          <div class="section-title">
+            <h2>Senseis</h2>
+            <h5></h5>
+          </div>
+        </div>
+        <div class="cols-12">
+      <div class="col col-4 facilitator-item">
+        <div class="col-inner">
+          <%= image_tag("home/eme_morato.jpg")%>
+          <h3>Manuel Morato.</h3>
+          <p>Manuel "Eme" Morato ha trabajado en startups tecnológicas en Silicon Valley, Corea del Sur y México en las áreas de negocios y estrategia. Actualmente trabaja en innovación cívica a través de Codeando México; es co-fundador y director del Dev.F. Fué director de StartupBus México y es ademas, facilitador de Startup Experience y profesor de emprendimiento en Universidad CENTRO.</p>
         </div>
       </div>
       <div class="col col-4 facilitator-item">
         <div class="col-inner">
           <%=image_tag("home/kike.png")%>
-          <h3>Enrique Diaz</h3>
-          <p>Enrique se inició en el desarrollo móvil en 2009, y desde 2011 ha trabajado con compañías como Motorola, Google y Grupo Expansión. Es organizador de hackathones como SHDH, AngelHack y co-organizador del GDG Androidtitlan.</p>
+          <h3>Enrique Díaz</h3>
+          <p>Kike  Enrique se inició en el desarrollo móvil en 2009, y desde 2011 ha trabajado con compañías como Motorola, Google y Grupo Expansión. Es organizador de hackathones como SHDH, AngelHack y co-organizador del GDG Androidtitlan.</p>
         </div>
       </div>
       <div class="col col-4 facilitator-item">
         <div class="col-inner">
           <%=image_tag("home/sandy.png")%>
           <h3>Sandra Macías</h3>
-          <p>Sandra es experta en diseño de interfaces y experiencia de usuario, habiendo diseñado y conceptualizado productos para marcas como BestBuy, Palacio de Hierro y Motorola. Actualmente es consultora en Google México para la revisión y selección de aplicaciones destacadas para Google Play en América Latina. En el pasado Sandra dirigió los esfuerzos de diseño de producto en Diverza.</p>
+          <p>Sandy es experta en diseño de interfaces y experiencia de usuario, habiendo diseñado y conceptualizado productos para marcas como BestBuy, Palacio de Hierro y Motorola. Actualmente es consultora en Google México para la revisión y selección de aplicaciones destacadas para Google Play en América Latina. En el pasado Sandra dirigió los esfuerzos de diseño de producto en Diverza.</p>
         </div>
       </div>
-    </div>    
+    </div>  
   </div>
 </div>   
 
-<div class="image-separator img-s-4"></div>
+<div class="image-separator data-image img-s-4"></div>
 
 <div class="section facilitators wow fadeIn" id="testimonials">
   <div class="wrapper">
@@ -283,7 +373,7 @@ home
           <h3>Pedro Hernández</h3>
           <p>A unos días de terminar el programa, Pedro hizo su primer aplicación profesional al ser parte del equipo que desarrolló la aplicación para Android de Semana del Emprendedor 2014.</p>
           <br>
-          <h5>"Aquí viví el mejor verano de mi vida"</h5>
+            <h4>"Aquí viví el mejor verano de mi vida"</h4>
         </div>
       </div>
       <div class="col col-4 facilitator-item">
@@ -293,16 +383,16 @@ home
           <p>Unas semanas después de terminar el programa y después de varias ofertas de empleo, Gabs decidió trabajar en Kangou como UX designer.</p>
           <br>
           <br>
-          <h5>"Gracias al Dev.F decidí quedarme en México en vez de irme a vivir a otro país"</h5>
+          <h4>"Gracias al Dev.F decidí quedarme en México en vez de irme a vivir a otro país"</h4>
         </div>
       </div>
       <div class="col col-4 facilitator-item">
         <div class="col-inner">
           <%=image_tag("home/rick.jpg")%>
           <h3>Ricardo Martínez</h3>
-          <p>Durante DevF Rick construyó su propia startup. Actualmente están en búsqueda de obtener capital semilla y fueron invitados a participar en The Summit, en Dublín, Irlanda.</p>
+          <p>Durante DevF Rick construyó su propia startup. Actualmente están en búsqueda de capital semilla y fueron invitados a participar en The Summit, en Dublín, Irlanda.</p>
           <br>
-          <h5>"Dev.F es una de esas experiencias que cambian tu visión y hackean tu vida."</h5>
+          <h4>"Dev.F es una de esas experiencias que cambian tu visión y hackean tu vida."</h4>
         </div>
       </div>
     </div> 
@@ -312,6 +402,8 @@ home
     </div>
   </div>
 </div>
+
+<div class="image-separator data-image img-s-5"></div>
 
 <div class="section signup" id="apply" style="display: none;">
   <!--
