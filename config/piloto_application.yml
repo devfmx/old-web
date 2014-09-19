@@ -2,6 +2,9 @@
   question: "Nombre"
   type: name
 -
+  question: "Nombre"
+  type: name
+-
   question: "Email"
   type: email
 -
