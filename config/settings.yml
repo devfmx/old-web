@@ -14,16 +14,16 @@ common: &common
     hook: incoming-webhook
     test: '#prueba'
     exception_ocurred:
-      channel: '#sitio-web-devf'
+      channel: 'site-exceptions'
       username: "Boomer"
     user_registered:
-      channel: "#general"
+      channel: "site-notifications" 
     application_received:
-      channel: "#general"
+      channel: "site-notifications"
     application_decided:
-      channel: '#general'
+      channel: 'site-notifications'
     application_rated:
-      channel: '#general'
+      channel: 'site-notifications'
 
 development:
   <<: *common
