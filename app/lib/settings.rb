@@ -39,7 +39,7 @@ class Settings < Settingslogic
   end
 
   def smtp_settings
-    super.merge password: secrets.smtp_password
+    super.merge password: Rails.application.secrets.smtp_password
   end
 
   # def secrets
