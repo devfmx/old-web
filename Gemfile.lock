@@ -292,7 +292,6 @@ DEPENDENCIES
   omniauth-twitter
   pg
   pry
-  puma
   rails (= 4.1.1)
   rails_12factor
   sass-rails (~> 4.0.3)
