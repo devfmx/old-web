@@ -27,7 +27,7 @@ common: &common
 
 development:
   <<: *common
-  domain: "devf.dev"
+  domain: "localhost:3000"
   smtp_settings:
     :address: "smtp.gmail.com"
     :port: 587
