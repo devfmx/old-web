@@ -11,8 +11,8 @@
   when 'email'
    value = current_user.email if value.blank?
    type = 'email'
-  when  'phone'
-	value  = current_user.phone if value.blank?
+  when 'phone'
+	value = current_user.phone if value.blank?
 	type = 'text_field'
   end
 %>
