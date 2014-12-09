@@ -110,11 +110,7 @@ GEM
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
     hashie (2.1.1)
-<<<<<<< HEAD
     heroku (3.16.2)
-=======
-    heroku (3.16.0)
->>>>>>> ed3d46ad63fd4be74d40bdd575d2257f1d847346
       heroku-api (~> 0.3.19)
       launchy (>= 0.3.2)
       multi_json (~> 1.10.1)
@@ -304,10 +300,7 @@ DEPENDENCIES
   foreigner
   gon
   heroku
-<<<<<<< HEAD
-=======
   heroku_secrets!
->>>>>>> ed3d46ad63fd4be74d40bdd575d2257f1d847346
   httparty
   jbuilder (~> 2.0)
   jquery-rails
