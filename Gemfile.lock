@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/alexpeattie/heroku_secrets.git
+  revision: 717af8e0acf399bc88d2c8c1a7e230023942af0f
+  specs:
+    heroku_secrets (0.0.2)
+
+GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: 0af41dfdcab1f3974814d27d0b6f32929a0c682d
   specs:
@@ -104,7 +110,11 @@ GEM
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
     hashie (2.1.1)
+<<<<<<< HEAD
     heroku (3.16.2)
+=======
+    heroku (3.16.0)
+>>>>>>> ed3d46ad63fd4be74d40bdd575d2257f1d847346
       heroku-api (~> 0.3.19)
       launchy (>= 0.3.2)
       multi_json (~> 1.10.1)
@@ -149,7 +159,6 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.3.16)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
@@ -182,6 +191,7 @@ GEM
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     polyamorous (1.0.0)
       activerecord (>= 3.0)
     polyglot (0.3.4)
@@ -204,6 +214,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.1)
       sprockets-rails (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.1.1)
       actionpack (= 4.1.1)
       activesupport (= 4.1.1)
@@ -289,18 +304,22 @@ DEPENDENCIES
   foreigner
   gon
   heroku
+<<<<<<< HEAD
+=======
+  heroku_secrets!
+>>>>>>> ed3d46ad63fd4be74d40bdd575d2257f1d847346
   httparty
   jbuilder (~> 2.0)
   jquery-rails
   meta-tags
-  mysql2
   non-stupid-digest-assets
   omniauth-facebook
   omniauth-github
   omniauth-twitter
+  pg
   pry
-  puma
   rails (= 4.1.1)
+  rails_12factor
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   settingslogic

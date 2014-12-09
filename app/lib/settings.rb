@@ -39,16 +39,16 @@ class Settings < Settingslogic
   end
 
   def smtp_settings
-    super.merge password: secrets.smtp_password
+    super.merge password: Rails.application.secrets.smtp_password
   end
 
-  def secrets
-    Secrets
-  end
+  # def secrets
+  #   Secrets
+  # end
 
-  class Secrets < Settingslogic
-    source "config/secrets.yml"
-    namespace ENV['RAILS_ENV'] || 'development'
-    load!
-  end
+  # class Secrets < Settingslogic
+  #   source "config/secrets.yml"
+  #   namespace ENV['RAILS_ENV'] || 'development'
+  #   load!
+  # end
 end

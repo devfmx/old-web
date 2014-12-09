@@ -30,7 +30,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-gem 'puma'
+# gem 'puma'
 
 # Use Capistrano for deployment
 gem 'capistrano-rvm', group: :development, :require => false
@@ -41,7 +41,8 @@ gem 'httparty'
 gem 'heroku', group: :development, :require => false
 gem 'pry', group: [:development, :test]
 gem 'foreigner'
-gem 'mysql2'
+# gem 'mysql2'
+gem 'pg'
 gem 'activeadmin',         github: 'gregbell/active_admin'
 gem 'devise'
 gem 'omniauth-facebook'
@@ -56,3 +57,5 @@ gem 'slack-notifier'
 gem 'meta-tags'
 gem 'acts-as-taggable-on'
 gem 'gon'
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+gem 'rails_12factor'

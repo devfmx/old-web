@@ -44,10 +44,12 @@ test:
 production:
   <<: *common
   domain: "devf.mx"
+  # domain: "devf-site.herokuapp.com"
   smtp_settings:
     :address: "smtp.gmail.com"
     :port: 587
     :domain: "devf.mx"
+    # :domain: "devf-site.herokuapp.com"
     :user_name: "noreply@devf.mx"
     :authentication: plain
     :enable_starttls_auto: true
