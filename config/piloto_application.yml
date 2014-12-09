@@ -1,6 +1,10 @@
 -
-  question: "Nombre"
-  type: name
+  question: "En que programa te interesa participar"
+  type: select
+  choices:
+    - Cinta Blanca
+    - Cinta Roja
+	- Cinta Negra
 -
   question: "Nombre"
   type: name
@@ -11,34 +15,29 @@
   question: "Teléfono"
   type: phone
 -
-  question: "¿Dónde vives? (delegación, ciudad, estado, etc.)"
+  question: "¿En qué parte de México o del mundo vives? (si vives en el DF, incluir delegación y zona)"
   type: text_area
 -
-  question: "Si no existiera tecnología, ¿que te gustaría crear o construir?"
+  question: "¿Por qué quieres entrar a Dev.F.?"
   type: text_area
 -
-  question: "¿Por qué quieres tomar el curso de Dev.F.?"
+  question: "Platícanos sobre un fracaso o fuck-up grande que tuviste y sobre el aprendizaje que te dejó."
   type: text_area
 -
-  question: "¿Qué es lo más interesante o fascinante que has aprendido en el último mes?"
+  question: "¿Qué te ves haciendo en 2 años?"
+  type: text_area
+-
+  question: "¿Qué logro te ha hecho sentir más orgulloso?"
+  type: text_area
+-
+  question: "¿Qué personaje admiras? ¿Por qué?"
   type: text_area
 -
   question: "¿Qué haces en tu tiempo libre?"
   type: text_area
 -
-  question: "¿Cómo escuchaste de Dev.F.?"
-  type: select
-  choices:
-    - En mi escuela
-    - Por algun amigo
-    - Por alguna red social
-    - Otro
--
-  question: "¿Qué experiencia o aprendizaje previo has tenido en programación?"
+  question: "¿Qué herramientas te gusta utilizar en tu ocupación diaria? ¿Por qué?"
   type: text_area
 -
-  question: "¿Estudias una carrera técnica o has tomado algún curso en línea de programación?"
-  type: text_area
--
-  question: "Comparte con nosotros algun enlace a GitHub, Twitter o cualquier pagina sobre ti"
+  question: "¿A qué te dedicarías si vivieras en la época de Leonardo Da Vinci?"
   type: text_area
