@@ -3,7 +3,6 @@
   id    = question.id || name.to_url
   value = @answers.send(id)
   type  = question.type
-
   case type
   when 'name'
    value = current_user.name if value.blank?
@@ -11,9 +10,6 @@
   when 'email'
    value = current_user.email if value.blank?
    type = 'email'
-  when 'phone'
-	value = current_user.phone if value.blank?
-	type = 'text_field'
   end
 %>
 
@@ -27,8 +23,6 @@
     <%= f.text_field id, :value => value, :required => 'required' %>
     <% when 'email' %>
     <%= f.email_field id, :value => value, :required => 'required' %>
-    <% when 'phone' %>
-    <%= f.phone_field id, :value => value, :required => 'required' %>
     <% when 'text_area' %>
     <%= f.text_area id, :rows => 5, :cols => 60, :value => value, :required => 'required' %>
     <% when 'select' %>
