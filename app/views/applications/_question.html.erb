@@ -11,9 +11,9 @@
   when 'email'
    value = current_user.email if value.blank?
    type = 'email'
-  when 'phone'
-   value = current_user.phone if value.blank?
-   type = 'text_field'
+  when  'phone'
+	value  = current_user.phone if value.blank?
+	type = 'phone'
   end
 %>
 
@@ -28,7 +28,7 @@
     <% when 'email' %>
     <%= f.email_field id, :value => value, :required => 'required' %>
     <% when 'phone' %>
-    <%= f.phone_field id, :value => value, :required => 'required' %>	
+    <%= f.phone_field id, :value => value, :required => 'required' %>
     <% when 'text_area' %>
     <%= f.text_area id, :rows => 5, :cols => 60, :value => value, :required => 'required' %>
     <% when 'select' %>
