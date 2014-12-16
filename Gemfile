@@ -43,6 +43,7 @@ gem 'pry', group: [:development, :test]
 gem 'foreigner'
 # gem 'mysql2'
 gem 'pg'
+gem 'mysql2'
 gem 'activeadmin',         github: 'gregbell/active_admin'
 gem 'devise'
 gem 'omniauth-facebook'
